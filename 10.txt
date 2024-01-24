@@ -1,0 +1,39 @@
+{
+  "entities": [
+    {"label":"Case","id":"case10","summary":"A 49-year-old woman with right upper quadrant pain, weight loss, and inoperable HCC."},
+    {"label":"Person","id":"person10","age":"49","location":null,"gender":"female"},
+    {"label":"Symptom","id":"rightUpperQuadrantPain","description":"right upper quadrant pain"},
+    {"label":"Symptom","id":"weightLoss","description":"weight loss"},
+    {"label":"Symptom","id":"hepatitisBCarrier","description":"hepatitis B virus carrier"},
+    {"label":"Symptom","id":"highAFPLevel","description":"α-fetoprotein level of 1185.3 ng/mL"},
+    {"label":"Symptom","id":"dyspnoea","description":"sudden acute dyspnoea"},
+    {"label":"Symptom","id":"respiratorySymptoms","description":"peripheral oxygen saturation decreased to 90%"},
+    {"label":"Symptom","id":"headache","description":"serious headache"},
+    {"label":"Symptom","id":"consciousnessLoss","description":"transient consciousness loss"},
+    {"label":"Symptom","id":"nauseaVomiting","description":"accompanying nausea and vomiting"},
+    {"label":"Symptom","id":"neurologicSymptoms","description":"confusion, lower extremity weakness"},
+    {"label":"Diagnosis","id":"inoperableHCC","name":"inoperable HCC","description":"10-cm mass in the posterior segments of the right liver lobe, 1.5-cm mass in the left lateral segment"},
+    {"label":"Diagnosis","id":"cirrhosis","name":"Child-Pugh class A cirrhosis","description":"clinical signs of cirrhosis"},
+    {"label":"Diagnosis","id":"TACE","name":"TACE","description":"transarterial chemoembolization"},
+    {"label":"Biological","id":"iodizedOilDepositionLung","name":"iodized oil deposition in lung","description":"chest CT scan revealed multiple iodized oil-like high-density materials in parenchyma of the lung"},
+    {"label":"Biological","id":"iodizedOilDepositionBrain","name":"iodized oil deposition in brain","description":"non-contrast enhanced CT scanning showed multiple disseminated hyper-intense lesions in the brain"}
+  ],
+  "relationships": [
+    "case10|FOR|person10",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|rightUpperQuadrantPain",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|weightLoss",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|hepatitisBCarrier",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|highAFPLevel",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|dyspnoea",
+    "person10|HAS_SYMPTOM{when:next day,frequency:null,span:null}|respiratorySymptoms",
+    "person10|HAS_SYMPTOM{when:one week later,frequency:null,span:null}|headache",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|consciousnessLoss",
+    "person10|HAS_SYMPTOM{when:null,frequency:null,span:null}|nauseaVomiting",
+    "person10|HAS_SYMPTOM{when:one week later,frequency:null,span:null}|neurologicSymptoms",
+    "person10|HAS_DISEASE{when:null}|inoperableHCC",
+    "person10|HAS_DISEASE{when:null}|cirrhosis",
+    "person10|HAS_DIAGNOSIS{when:null}|TACE",
+    "person10|HAS_DIAGNOSIS{when:next day}|iodizedOilDepositionLung",
+    "person10|HAS_DIAGNOSIS{when:one week later}|iodizedOilDepositionBrain"
+  ]
+}

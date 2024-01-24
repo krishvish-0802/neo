@@ -1,0 +1,39 @@
+{
+  "entities": [
+    {"label":"Case","id":"case42","summary":"An 18-year-old lady with a history of progressive swaying while walking, worse at night for 5 years. Family history significant for elder sister with similar difficulty in walking who died due to poorly controlled diabetes mellitus at the age of 20."},
+    {"label":"Person","id":"person42","age":"18","location":null,"gender":"female"},
+    {"label":"Symptom","id":"ProgressiveSwaying","description":"progressive swaying while walking, worse in night for 5 years"},
+    {"label":"Symptom","id":"PositiveRomberg","description":"positive Romberg's sign"},
+    {"label":"Symptom","id":"TandemWalkDifficulty","description":"sways to either side while performing tandem walk"},
+    {"label":"Symptom","id":"GaitDifficulty","description":"gait ataxia"},
+    {"label":"Symptom","id":"MotorReflexExaggeration","description":"generalized exaggeration of myotatic reflexes with bilateral extensor plantar response"},
+    {"label":"Diagnosis","id":"FriedreichsAtaxia","name":"Friedreich's Ataxia (FRDA)","description":"genetic testing disclosed expansion of GAA repeat in both alleles of FXN gene"},
+    {"label":"Diagnosis","id":"ExpansionOfGAARepeat","name":"expansion of GAA repeat","description":"in both alleles of FXN gene"},
+    {"label":"Diagnosis","id":"AtaxiaWithVitaminEDeficiency","name":"Ataxia with vitamin E deficiency (AVED)","description":"considered in the differential diagnosis"},
+    {"label":"Diagnosis","id":"AtaxiaWithOculomotorApraxia","name":"Ataxia with oculomotor apraxia (AOA) types 1 and 2","description":"not considered due to lack of apraxia of ocular movements, distal amyotrophy, atrophy of cerebellum, and involuntary movements"},
+    {"label":"Diagnosis","id":"AtaxiaTelangiectasia","name":"Ataxia telangiectasia","description":"presentation similar to AOA types 1 and 2, but with muco-cutaneous markers, sino-pulmonary infections, hypogammaglobulinemia, radiosensitivity, and predisposition to neoplasms"},
+    {"label":"Diagnosis","id":"AutosomalRecessiveSpasticAtaxia","name":"Autosomal recessive spastic ataxia","description":"considered in the differential diagnosis"},
+    {"label":"Diagnosis","id":"CharcotMarieToothDisease","name":"Charcot-Marie-Tooth disease","description":"improbable due to lack of motor weakness, retained reflexes, bilaterally extensor plantar, and pure sensory neuropathy on nerve conduction study"},
+    {"label":"Treatment","id":"Idebenone","name":"Idebenone","description":"started at a dose of 450 mg twice a day for its antioxidant properties"},
+    {"label":"Treatment","id":"Physiotherapy","name":"Physiotherapy—Frenkel's exercise","description":"initiated for gait ataxia"},
+    {"label":"Monitoring","id":"BloodGlucoseMonitoring","name":"Blood glucose monitoring","description":"regularly monitored"}
+  ],
+  "relationships": [
+    "case42|FOR|person42",
+    "person42|HAS_SYMPTOM{when:null,frequency:null,span:null}|ProgressiveSwaying",
+    "person42|HAS_SYMPTOM{when:null,frequency:null,span:null}|PositiveRomberg",
+    "person42|HAS_SYMPTOM{when:null,frequency:null,span:null}|TandemWalkDifficulty",
+    "person42|HAS_SYMPTOM{when:null,frequency:null,span:null}|GaitDifficulty",
+    "person42|HAS_SYMPTOM{when:null,frequency:null,span:null}|MotorReflexExaggeration",
+    "person42|HAS_DISEASE{when:null}|FriedreichsAtaxia",
+    "person42|HAS_DIAGNOSIS|ExpansionOfGAARepeat",
+    "person42|HAS_DIAGNOSIS|AtaxiaWithVitaminEDeficiency",
+    "person42|HAS_DIAGNOSIS|AtaxiaWithOculomotorApraxia",
+    "person42|HAS_DIAGNOSIS|AtaxiaTelangiectasia",
+    "person42|HAS_DIAGNOSIS|AutosomalRecessiveSpasticAtaxia",
+    "person42|HAS_DIAGNOSIS|CharcotMarieToothDisease",
+    "person42|HAS_TREATMENT|Idebenone",
+    "person42|HAS_TREATMENT|Physiotherapy",
+    "person42|HAS_MONITORING|BloodGlucoseMonitoring"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "entities": [
+    {"label":"Case","id":"case35","summary":"A 51-year-old man with severe congestive heart failure, ventricular arrhythmias, and acromegaly."},
+    {"label":"Person","id":"person35","age":"51","location":null,"gender":"male"},
+    {"label":"Symptom","id":"congestiveHeartFailure","description":"severe congestive heart failure"},
+    {"label":"Symptom","id":"ventricularArrhythmias","description":"ventricular arrhythmias"},
+    {"label":"Symptom","id":"typicalFacialAppearance","description":"typical facial appearance"},
+    {"label":"Symptom","id":"thickeningOfHands","description":"thickening of hands"},
+    {"label":"Diagnosis","id":"acromegaly","name":"acromegaly","description":"diagnosed with acromegaly"},
+    {"label":"Disease","id":"cardiomyopathy","name":"cardiomyopathy","description":"diffuse hypokinetic left ventricle, markedly dilated left ventricle dimension (end-diastole: 95 mm), reduced EF (0.11)"},
+    {"label":"Biological","id":"ghLevel","name":"GH level","description":"8.2 ng/ml"},
+    {"label":"Biological","id":"igf1Level","name":"IGF-1 level","description":"504 ng/ml"},
+    {"label":"Diagnosis","id":"macroadenoma","name":"macroadenoma","description":"macroadenoma in the pituitary"},
+    {"label":"Diagnosis","id":"cardiomyocyteReplacement","name":"cardiomyocyte replacement","description":"over 50% of cardiomyocytes replaced by fibrosis"},
+    {"label":"Diagnosis","id":"implantableCardioverterDefibrillator","name":"implantable cardioverter-defibrillator","description":"implanted"},
+    {"label":"Diagnosis","id":"octreotideLAR","name":"octreotide long-acting-release (LAR)","description":"treated with octreotide LAR for 8 months"},
+    {"label":"Diagnosis","id":"transSphenoidalSurgery","name":"trans-sphenoidal surgery","description":"underwent trans-sphenoidal surgery in January 2009"},
+    {"label":"Diagnosis","id":"decreasedGHIGF1LevelsPostSurgery","name":"decreased GH and IGF-1 levels post-surgery","description":"basal plasma levels of GH mostly less than 0.5 ng/ml, IGF-1 levels within normal ranges"},
+    {"label":"Diagnosis","id":"improvedCardiacFunctionWithLAR","name":"improved cardiac function with LAR","description":"partially improved (cardiothoracic ratio=0.58; EF=0.20 in September 2008)"},
+    {"label":"Diagnosis","id":"drasticImprovementInCardiacFunctionPostSurgery","name":"drastic improvement in cardiac function post-surgery","description":"drastically improved (cardiothoracic ratio=0.47; EF=0.55 in April 2009)"}
+  ],
+  "relationships": [
+    "case35|FOR|person35",
+    "person35|HAS_SYMPTOM{when:'March 2008',frequency:null,span:'years'}|congestiveHeartFailure",
+    "person35|HAS_SYMPTOM{when:'March 2008',frequency:null,span:'years'}|ventricularArrhythmias",
+    "person35|HAS_SYMPTOM{when:null,frequency:null,span:null}|typicalFacialAppearance",
+    "person35|HAS_SYMPTOM{when:null,frequency:null,span:null}|thickeningOfHands",
+    "person35|HAS_DISEASE{when:'March 2008'}|cardiomyopathy",
+    "person35|HAS_DISEASE{when:'March 2008'}|acromegaly",
+    "person35|HAS_DIAGNOSIS|macroadenoma",
+    "person35|HAS_DIAGNOSIS|cardiomyocyteReplacement",
+    "person35|HAS_DIAGNOSIS|implantableCardioverterDefibrillator",
+    "person35|HAS_DIAGNOSIS|octreotideLAR",
+    "person35|HAS_DIAGNOSIS|transSphenoidalSurgery",
+    "person35|HAS_DIAGNOSIS|decreasedGHIGF1LevelsPostSurgery",
+    "person35|HAS_DIAGNOSIS|improvedCardiacFunctionWithLAR",
+    "person35|HAS_DIAGNOSIS|drasticImprovementInCardiacFunctionPostSurgery"
+  ]
+}

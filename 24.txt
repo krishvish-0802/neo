@@ -1,0 +1,34 @@
+{
+  "entities": [
+    {"label":"Case","id":"case24","summary":"An 81-year-old female with hypertension and gout admitted to Taichung Veterans General Hospital due to abdominal pain and hematemesis. History of intermittent epigastralgia for more than 10 years. Gastric tumor of 4 cm found previously. Recent worsening abdominal pain, tarry stool, and bloody vomitus."},
+    {"label":"Person","id":"person24","age":"81","location":"Taichung Veterans General Hospital","gender":"female"},
+    {"label":"Disease","id":"hypertension","name":"hypertension"},
+    {"label":"Disease","id":"gout","name":"gout"},
+    {"label":"Symptom","id":"abdominalPain","description":"abdominal pain"},
+    {"label":"Symptom","id":"hematemesis","description":"hematemesis"},
+    {"label":"Symptom","id":"epigastralgia","description":"intermittent epigastralgia for more than 10 years"},
+    {"label":"Symptom","id":"tarryStool","description":"tarry stool"},
+    {"label":"Symptom","id":"bloodyVomitus","description":"bloody vomitus"},
+    {"label":"Diagnosis","id":"gastricTumor","name":"gastric tumor","description":"4 cm in length with well-circumscribed calcification"},
+    {"label":"Diagnosis","id":"perforatedGastricTumor","name":"perforated gastric tumor","description":"irregularly shaped space-occupying lesion with plate calcifications and localized free air"},
+    {"label":"Diagnosis","id":"GIST","name":"GIST","description":"spindle-shaped tumor cells with low mitotic frequency (4/50 HPF), CD 117 and CD34 positive, S100 protein and desmin negative"},
+    {"label":"BodySystem","id":"stomach","name":"stomach"},
+    {"label":"BodySystem","id":"transverseColon","name":"transverse colon"}
+  ],
+  "relationships": [
+    "case24|FOR|person24",
+    "person24|HAS_DISEASE{when:null}|hypertension",
+    "person24|HAS_DISEASE{when:null}|gout",
+    "person24|HAS_SYMPTOM{when:null,frequency:null,span:null}|abdominalPain",
+    "person24|HAS_SYMPTOM{when:null,frequency:null,span:null}|hematemesis",
+    "person24|HAS_SYMPTOM{when:null,frequency:null,span:null}|epigastralgia",
+    "person24|HAS_SYMPTOM{when:null,frequency:null,span:null}|tarryStool",
+    "person24|HAS_SYMPTOM{when:null,frequency:null,span:null}|bloodyVomitus",
+    "person24|HAS_DIAGNOSIS|gastricTumor",
+    "person24|HAS_DIAGNOSIS|perforatedGastricTumor",
+    "person24|HAS_DIAGNOSIS|GIST",
+    "perforatedGastricTumor|SEEN_ON|stomach",
+    "GIST|AFFECTS|stomach",
+    "GIST|AFFECTS|transverseColon"
+  ]
+}

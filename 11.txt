@@ -1,0 +1,43 @@
+{
+  "entities": [
+    {"label":"Case","id":"case11","summary":"A 71-year-old woman with known diastolic congestive heart failure (CHF), autoimmune hepatitis, esophageal varices, and recent exacerbation of CHF."},
+    {"label":"Person","id":"person11","age":"71","location":null,"gender":"female"},
+    {"label":"Symptom","id":"exacerbationCHF","description":"exacerbation of CHF"},
+    {"label":"Symptom","id":"decreasedConsciousness","description":"decreased level of consciousness"},
+    {"label":"Symptom","id":"hypotension","description":"brachial blood pressure measured at 55/40 mmHg"},
+    {"label":"Symptom","id":"lowBP","description":"previous BP values consistently low, systolic BP between 60 mmHg and 65 mmHg, diastolic BP between 40 mmHg and 45 mmHg"},
+    {"label":"Symptom","id":"atrialFlutter","description":"developed atrial flutter"},
+    {"label":"Symptom","id":"hypertension","description":"BP values consistently much higher through femoral arterial line than cuff on the arms"},
+    {"label":"Symptom","id":"inconsistencyBP","description":"inconsistency between brachial and femoral BP values"},
+    {"label":"Diagnosis","id":"concentricLVH","name":"moderate concentric left ventricular hypertrophy with diastolic dysfunction"},
+    {"label":"Diagnosis","id":"mitralRegurgitation","name":"mild to moderate mitral regurgitation"},
+    {"label":"Diagnosis","id":"coronaryArteryStenosis","name":"50% stenosis in the second diagonal artery, mild diffuse disease in other coronary arteries"},
+    {"label":"Diagnosis","id":"atrialFlutterConversion","name":"atrial flutter successfully converted to sinus rhythm"},
+    {"label":"Diagnosis","id":"calcifiedPlaqueThrombus","name":"densely calcified plaque or thrombus at origins of both subclavian arteries and right common carotid artery"},
+    {"label":"Diagnosis","id":"subclavianArteryStenosis","name":"absence of flow in right subclavian artery, very tight stenosis at origin of left subclavian artery, tight stenosis at origin of right common carotid artery"},
+    {"label":"Diagnosis","id":"femoralBPInconsistency","name":"inconsistency between brachial and femoral BP values"},
+    {"label":"Biological","id":"femoralArterialLineManagement","name":"management based on femoral BP readings with diuretics and BP-lowering agents"},
+    {"label":"Biological","id":"dischargeCondition","name":"discharged in stable condition"},
+    {"label":"Biological","id":"eightMonthsStability","name":"remained stable during eight months between discharge and present report"}
+  ],
+  "relationships": [
+    "case11|FOR|person11",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|exacerbationCHF",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|decreasedConsciousness",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|hypotension",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|lowBP",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|atrialFlutter",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|hypertension",
+    "person11|HAS_SYMPTOM{when:null,frequency:null,span:null}|inconsistencyBP",
+    "person11|HAS_DISEASE{when:null}|concentricLVH",
+    "person11|HAS_DISEASE{when:null}|mitralRegurgitation",
+    "person11|HAS_DISEASE{when:null}|coronaryArteryStenosis",
+    "person11|HAS_DISEASE{when:null}|atrialFlutterConversion",
+    "person11|HAS_DIAGNOSIS{when:null}|calcifiedPlaqueThrombus",
+    "person11|HAS_DIAGNOSIS{when:null}|subclavianArteryStenosis",
+    "person11|HAS_DIAGNOSIS{when:null}|femoralBPInconsistency",
+    "person11|HAS_DIAGNOSIS{when:null}|femoralArterialLineManagement",
+    "person11|HAS_DIAGNOSIS{when:null}|dischargeCondition",
+    "person11|HAS_DIAGNOSIS{when:null}|eightMonthsStability"
+  ]
+}

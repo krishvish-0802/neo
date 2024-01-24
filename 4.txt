@@ -1,0 +1,27 @@
+{
+  "entities": [
+    {"label": "Case", "id": "case4", "summary": "A 30-year-old female (65 kg) underwent rhinoplasty under general anesthesia with subsequent complications."},
+    {"label": "Person", "id": "person4", "age": "30", "gender": "female", "location": "unknown"},
+    {"label": "Symptom", "id": "difficultySwallowing", "description": "complained of difficulty in swallowing"},
+    {"label": "Symptom", "id": "dysphonia", "description": "complained of dysphonia"},
+    {"label": "Symptom", "id": "hoarseness", "description": "complained of hoarseness"},
+    {"label": "Symptom", "id": "tongueDeviation", "description": "examination revealed deviation of the tongue to the right side"},
+    {"label": "Symptom", "id": "vocalCordParalysis", "description": "examination revealed vocal cord paralysis"},
+    {"label": "Disease", "id": "nerveInjury", "name": "hypoglossal and recurrent laryngeal nerve injury"},
+    {"label": "BodySystem", "id": "respiratorySystem", "name": "respiratory system"},
+    {"label": "Diagnosis", "id": "anesthesiaComplication", "name": "complications from general anesthesia during rhinoplasty", "description": "difficulty in swallowing, dysphonia, hoarseness, tongue deviation, vocal cord paralysis, nerve injury"},
+    {"label": "Biological", "id": "recovery", "name": "full recovery", "description": "lingual and laryngeal functions recovered within four months after surgery"}
+  ],
+  "relationships": [
+    "case4|FOR|person4",
+    "person4|HAS_SYMPTOM{when:null,frequency:null,span:null}|difficultySwallowing",
+    "person4|HAS_SYMPTOM{when:null,frequency:null,span:null}|dysphonia",
+    "person4|HAS_SYMPTOM{when:null,frequency:null,span:null}|hoarseness",
+    "person4|HAS_SYMPTOM{when:null,frequency:null,span:null}|tongueDeviation",
+    "person4|HAS_SYMPTOM{when:null,frequency:null,span:null}|vocalCordParalysis",
+    "person4|HAS_DISEASE{when:null}|nerveInjury",
+    "nerveInjury|AFFECTS|respiratorySystem",
+    "person4|HAS_DIAGNOSIS|anesthesiaComplication",
+    "anesthesiaComplication|SHOWED|recovery"
+  ]
+}

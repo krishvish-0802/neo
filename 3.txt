@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {"label": "Case", "id": "case3", "summary": "A 23-year-old white male with a 4-year history of Crohn's disease presented with an acute two-day history of malaise, fever, abdominal pain, vomiting, and stomal diarrhea."},
+    {"label": "Person", "id": "person3", "age": "23", "gender": "male", "location": "unknown"},
+    {"label": "Symptom", "id": "malaise", "description": "acute two-day history of malaise"},
+    {"label": "Symptom", "id": "fever", "description": "acute two-day history of fever"},
+    {"label": "Symptom", "id": "abdominalPain", "description": "acute two-day history of abdominal pain"},
+    {"label": "Symptom", "id": "vomiting", "description": "acute two-day history of vomiting"},
+    {"label": "Symptom", "id": "stomalDiarrhoea", "description": "acute two-day history of stomal diarrhea"},
+    {"label": "Symptom", "id": "jointPains", "description": "complained of joint pains affecting the shoulders, elbows, wrists, metacarpophalangeals, knees, and ankles"},
+    {"label": "Symptom", "id": "rash", "description": "rash on the elbows, ankles, and feet; began as erythematous macules and evolved to vesico-pustular lesions followed by crusting"},
+    {"label": "Disease", "id": "crohnsDisease", "name": "Crohn's disease"},
+    {"label": "BodySystem", "id": "skin", "name": "skin"},
+    {"label": "BodySystem", "id": "joints", "name": "joints"},
+    {"label": "Diagnosis", "id": "leukocytoclasticVasculitis", "name": "'leukocytoclastic' vasculitis", "description": "skin biopsy revealed a perivascular lymphohistiocytic infiltrate with prominent neutrophils and associated fibrinoid necrosis of vessels", "when": "unknown"},
+    {"label": "Biological", "id": "prednisolone", "name": "prednisolone", "description": "commenced on 60 mg prednisolone per day leading to prompt and complete resolution of all features"}
+  ],
+  "relationships": [
+    "case3|FOR|person3",
+    "person3|HAS_SYMPTOM{when:\"2 days\",frequency:\"unknown\",span:\"unknown\"}|malaise",
+    "person3|HAS_SYMPTOM{when:\"2 days\",frequency:\"unknown\",span:\"unknown\"}|fever",
+    "person3|HAS_SYMPTOM{when:\"2 days\",frequency:\"unknown\",span:\"unknown\"}|abdominalPain",
+    "person3|HAS_SYMPTOM{when:\"2 days\",frequency:\"unknown\",span:\"unknown\"}|vomiting",
+    "person3|HAS_SYMPTOM{when:\"2 days\",frequency:\"unknown\",span:\"unknown\"}|stomalDiarrhoea",
+    "person3|HAS_SYMPTOM{when:\"unknown\",frequency:\"unknown\",span:\"unknown\"}|jointPains",
+    "person3|HAS_SYMPTOM{when:\"unknown\",frequency:\"unknown\",span:\"unknown\"}|rash",
+    "person3|HAS_DISEASE{when:\"4 years\"}|crohnsDisease",
+    "symptom|SEEN_ON|skin",
+    "symptom|SEEN_ON|joints",
+    "person3|HAS_DIAGNOSIS|leukocytoclasticVasculitis",
+    "diagnosis|SHOWED|prednisolone"
+  ]
+}

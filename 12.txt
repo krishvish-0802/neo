@@ -1,0 +1,19 @@
+{
+  "entities": [
+    {"label":"Case","id":"case12","summary":"A 46-year-old woman with severe acute pain in the right iliac fossa and periumbilical region, diagnosed with combined GCC and MCA of the vermiform appendix."},
+    {"label":"Person","id":"person12","age":"46","location":null,"gender":"female"},
+    {"label":"Symptom","id":"acutePainAppendix","description":"severe acute pain in the right iliac fossa and periumbilical region"},
+    {"label":"Disease","id":"GCC_MCA","name":"combined GCC and MCA of the vermiform appendix"},
+    {"label":"BodySystem","id":"appendix","name":"vermiform appendix"},
+    {"label":"Diagnosis","id":"neuroendocrineTumor","name":"neuroendocrine tumor in the vermiform appendix"},
+    {"label":"Biological","id":"immunohistochemistry","name":"immunohistochemically positive for chromogranin, synaptophysin, serotonin, CK20, CK19, CD99; Ki67 proliferating index approximately 15%, no staining for CK7"}
+  ],
+  "relationships": [
+    "case12|FOR|person12",
+    "person12|HAS_SYMPTOM{when:null,frequency:null,span:null}|acutePainAppendix",
+    "person12|HAS_DISEASE{when:null}|GCC_MCA",
+    "symptom|SEEN_ON|appendix",
+    "person12|HAS_DIAGNOSIS|neuroendocrineTumor",
+    "neuroendocrineTumor|SHOWED|immunohistochemistry"
+  ]
+}

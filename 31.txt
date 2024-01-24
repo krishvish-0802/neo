@@ -1,0 +1,32 @@
+{
+  "entities": [
+    {"label":"Case","id":"case31","summary":"A 60-year-old male with a history of retroperitoneal liposarcoma, recurrence, and duodenal resection."},
+    {"label":"Person","id":"person31","age":"60","location":null,"gender":"male"},
+    {"label":"Disease","id":"liposarcoma","name":"liposarcoma","location":"retroperitoneum"},
+    {"label":"BodySystem","id":"retroperitoneum","name":"retroperitoneum"},
+    {"label":"Diagnosis","id":"initialResection","name":"initial resection","description":"radical resection of T2bN0M0G3 Stage III retroperitoneal liposarcoma, right nephrectomy, cholecystectomy"},
+    {"label":"Diagnosis","id":"tumorRecurrence","name":"tumor recurrence","description":"isolated tumor recurrence in the retroperitoneum"},
+    {"label":"Diagnosis","id":"radiationTreatment","name":"radiation treatment","description":"stereotactic body radiation to the retroperitoneal tumor"},
+    {"label":"Diagnosis","id":"duodenalMass","name":"duodenal mass","description":"7 cm mass involving the third portion of the duodenum"},
+    {"label":"Diagnosis","id":"duodenalResection","name":"duodenal resection","description":"partial duodenal resection with hand-sewn duodenojejunal anastomosis"},
+    {"label":"Biological","id":"liposarcomaHistology","name":"liposarcoma histology","description":"recurrent high-grade liposarcoma with polypoid intraluminal growth containing myxoid, round cell, well-differentiated, sclerosing, and focally pleomorphic areas"}
+  ],
+  "relationships": [
+    "case31|FOR|person31",
+    "person31|HAS_DISEASE{when:'2002'}|liposarcoma",
+    "person31|HAS_DIAGNOSIS|initialResection",
+    "initialResection|SHOWED|liposarcomaHistology",
+    "person31|HAS_DIAGNOSIS|tumorRecurrence",
+    "tumorRecurrence|SHOWED|liposarcomaHistology",
+    "person31|HAS_DIAGNOSIS|radiationTreatment",
+    "radiationTreatment|SHOWED|liposarcomaHistology",
+    "person31|HAS_SYMPTOM{when:'1 year later',frequency:null,span:null}|weightLoss",
+    "person31|HAS_SYMPTOM{when:'1 year later',frequency:'postprandial',span:null}|abdominalPain",
+    "person31|HAS_SYMPTOM{when:'1 year later',frequency:'postprandial',span:null}|nausea",
+    "person31|HAS_SYMPTOM{when:'1 year later',frequency:'postprandial',span:null}|vomiting",
+    "person31|HAS_DIAGNOSIS{when:'1 year later'}|duodenalMass",
+    "duodenalMass|SEEN_ON|retroperitoneum",
+    "person31|HAS_DIAGNOSIS|duodenalResection",
+    "duodenalResection|SHOWED|liposarcomaHistology"
+  ]
+}

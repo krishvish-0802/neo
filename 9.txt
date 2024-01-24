@@ -1,0 +1,39 @@
+{
+  "entities": [
+    {"label":"Case","id":"case9","summary":"A 28-year-old woman with right upper quadrant pain, jaundice, weight loss, and a liver mass."},
+    {"label":"Person","id":"person9","age":"28","location":null,"gender":"female"},
+    {"label":"Symptom","id":"continuousModerateRightUpperQuadrantPain","description":"continuous, moderate right upper quadrant pain"},
+    {"label":"Symptom","id":"jaundice","description":"jaundice"},
+    {"label":"Symptom","id":"weightLoss","description":"weight loss of 10 kg over 3 months"},
+    {"label":"Symptom","id":"icterus","description":"icterus noted over the conjunctivae, oral mucosa, and skin"},
+    {"label":"Symptom","id":"obesity","description":"obese (body mass index 37.8)"},
+    {"label":"Symptom","id":"colickyAttacks","description":"previous colicky attacks before laparoscopic cholecystectomy"},
+    {"label":"Diagnosis","id":"liverMass","name":"liver mass","description":"identified by ultrasonography"},
+    {"label":"Diagnosis","id":"cysticLesion","name":"cystic lesion","description":"3.5 x 2.5 cm within the central portion of the liver"},
+    {"label":"Diagnosis","id":"extensiveStricture","name":"extensive stricture","description":"obliterating the left hepatic duct, with partial occlusion of the right hepatic duct"},
+    {"label":"Diagnosis","id":"squamousCellCarcinoma","name":"squamous cell carcinoma","description":"moderately differentiated, associated with severe dysplasia of the bile-duct epithelium"},
+    {"label":"Diagnosis","id":"freeMargins","name":"free margins","description":"all margins of the excised specimen were free of malignant cells"},
+    {"label":"Diagnosis","id":"rouxEnYCholangiojejunostomy","name":"Roux-en-Y cholangiojejunostomy","description":"reconstruction performed to 3 second bile duct radicals in the right side"},
+    {"label":"Diagnosis","id":"radiotherapy","name":"radiotherapy","description":"applied to the surgical margins intraoperatively"},
+    {"label":"Diagnosis","id":"externalBeamRadiation","name":"external beam radiation","description":"6 weeks of image-guided radiation centered on the resection field"},
+    {"label":"Biological","id":"unremarkableCTScan","name":"unremarkable CT scan","description":"18 months after the initial surgical procedure"}
+  ],
+  "relationships": [
+    "case9|FOR|person9",
+    "person9|HAS_SYMPTOM{when:4 weeks,frequency:null,span:null}|continuousModerateRightUpperQuadrantPain",
+    "person9|HAS_SYMPTOM{when:4 weeks,frequency:null,span:null}|jaundice",
+    "person9|HAS_SYMPTOM{when:3 months,frequency:null,span:null}|weightLoss",
+    "person9|HAS_SYMPTOM{when:null,frequency:null,span:null}|icterus",
+    "person9|HAS_SYMPTOM{when:null,frequency:null,span:null}|obesity",
+    "person9|HAS_SYMPTOM{when:7 years,frequency:null,span:null}|colickyAttacks",
+    "person9|HAS_DISEASE{when:null}|liverMass",
+    "person9|HAS_DIAGNOSIS{when:null}|cysticLesion",
+    "person9|HAS_DIAGNOSIS{when:null}|extensiveStricture",
+    "person9|HAS_DISEASE{when:null}|squamousCellCarcinoma",
+    "person9|HAS_DIAGNOSIS{when:null}|freeMargins",
+    "person9|HAS_DIAGNOSIS{when:null}|rouxEnYCholangiojejunostomy",
+    "person9|HAS_DIAGNOSIS{when:null}|radiotherapy",
+    "person9|HAS_DIAGNOSIS{when:'6 weeks'}|externalBeamRadiation",
+    "person9|HAS_DIAGNOSIS{when:'18 months after'}|unremarkableCTScan"
+  ]
+}

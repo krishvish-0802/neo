@@ -1,0 +1,25 @@
+{
+  "entities": [
+    {"label":"Case","id":"case28","summary":"A 26-year-old man with subacute onset of right-sided hemiparesis and aphasia, diagnosed with Balo concentric sclerosis and later with CADASIL."},
+    {"label":"Person","id":"person28","age":"26","location":null,"gender":"male"},
+    {"label":"Symptom","id":"hemiparesis","description":"subacute onset of right-sided hemiparesis"},
+    {"label":"Symptom","id":"aphasia","description":"aphasia with marked expressive aphasia, word-finding difficulty, and rare paraphrasic errors"},
+    {"label":"Symptom","id":"facialWeakness","description":"right central facial weakness"},
+    {"label":"Symptom","id":"dysmetria","description":"dysmetria in the right upper and lower extremities"},
+    {"label":"Symptom","id":"hyperactiveReflexes","description":"hyperactive reflexes on the right with a right-sided Babinski response"},
+    {"label":"Diagnosis","id":"BaloConcentricSclerosis","name":"Balo concentric sclerosis","description":"multiple bilateral concentric ring-like structures in the centrum semiovale and the corona radiata on T2 imaging"},
+    {"label":"Diagnosis","id":"CADASIL","name":"cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy","description":"carrier of the Notch3 mutation"},
+    {"label":"Biological","id":"Notch3Mutation","name":"Notch3 mutation","description":"transition C>T, nucleotide position 1750, codon 558"}
+  ],
+  "relationships": [
+    "case28|FOR|person28",
+    "person28|HAS_SYMPTOM{when:null,frequency:null,span:'subacute onset'}|hemiparesis",
+    "person28|HAS_SYMPTOM{when:null,frequency:null,span:null}|aphasia",
+    "person28|HAS_SYMPTOM{when:null,frequency:null,span:null}|facialWeakness",
+    "person28|HAS_SYMPTOM{when:null,frequency:null,span:null}|dysmetria",
+    "person28|HAS_SYMPTOM{when:null,frequency:null,span:null}|hyperactiveReflexes",
+    "person28|HAS_DISEASE{when:null}|BaloConcentricSclerosis",
+    "person28|HAS_DISEASE{when:null}|CADASIL",
+    "person28|HAS_DIAGNOSIS|Notch3Mutation"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entities": [
+    {"label":"Case","id":"case14","summary":"A 24-year-old non-smoking male patient presented with repeated hemoptysis, right thoracic pain, and a paravertebral solid mass in the lower thorax, diagnosed as a granular cell or Abrikossoff tumor."},
+    {"label":"Person","id":"person14","age":"24","location":null,"gender":"male"},
+    {"label":"Symptom","id":"hemoptysis","description":"repeated hemoptysis"},
+    {"label":"Symptom","id":"thoracicPain","description":"right thoracic pain intensified while breathing"},
+    {"label":"Symptom","id":"cough","description":"strong dry cough"},
+    {"label":"Disease","id":"abrikossoffTumor","name":"granular cell or Abrikossoff tumor"},
+    {"label":"BodySystem","id":"thorax","name":"thorax"},
+    {"label":"Diagnosis","id":"initialDiagnosis","name":"solid mass paravertebral in the lower thorax","description":"CT scan"},
+    {"label":"Diagnosis","id":"bronchoscopyDiagnosis","name":"mass of the lower right bronchus","description":"bronchoscopy with non-bleeding biopsy"},
+    {"label":"Diagnosis","id":"hemothoraxDiagnosis","name":"spontaneous hemothorax","description":"developed 4 days after discharge"},
+    {"label":"Diagnosis","id":"finalHistology","name":"S100 positive tumor","description":"peribronchial and infiltrating with very low growth rate of 2%, size of 15 mm"}
+  ],
+  "relationships": [
+    "case14|FOR|person14",
+    "person14|HAS_SYMPTOM{when:'May 2008',frequency:'repeated',span:'4 days'}|hemoptysis",
+    "person14|HAS_SYMPTOM{when:'May 2008',frequency:'intensified while breathing',span:null}|thoracicPain",
+    "person14|HAS_SYMPTOM{when:'after recovery from cold',frequency:'persistent',span:null}|cough",
+    "person14|HAS_DISEASE{when:'May 2008'}|abrikossoffTumor",
+    "symptom|SEEN_ON|thorax",
+    "person14|HAS_DIAGNOSIS|initialDiagnosis",
+    "person14|HAS_DIAGNOSIS|bronchoscopyDiagnosis",
+    "person14|HAS_DIAGNOSIS|hemothoraxDiagnosis",
+    "person14|HAS_DIAGNOSIS|finalHistology"
+  ]
+}

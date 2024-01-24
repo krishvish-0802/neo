@@ -1,0 +1,19 @@
+{
+  "entities": [
+    {"label":"Case","id":"case13","summary":"A 72-year-old woman underwent RF ablation for the treatment of a metachronous solitary liver metastasis from rectal adenocarcinoma, experiencing complications with liver lacerations and intraperitoneal bleeding."},
+    {"label":"Person","id":"person13","age":"72","location":null,"gender":"female"},
+    {"label":"Symptom","id":"complicationsRF","description":"dizziness, fatigue, pallor, hypotension, tachycardia"},
+    {"label":"Disease","id":"liverLacerations","name":"liver lacerations and intraperitoneal bleeding"},
+    {"label":"BodySystem","id":"liver","name":"liver"},
+    {"label":"Diagnosis","id":"complicationsDiagnosis","name":"complications with liver lacerations and intraperitoneal bleeding"},
+    {"label":"Biological","id":"bloodTests","name":"haemoglobin level < 7 g/dL, markedly elevated transaminase levels"}
+  ],
+  "relationships": [
+    "case13|FOR|person13",
+    "person13|HAS_SYMPTOM{when:null,frequency:null,span:null}|complicationsRF",
+    "person13|HAS_DISEASE{when:null}|liverLacerations",
+    "symptom|SEEN_ON|liver",
+    "person13|HAS_DIAGNOSIS|complicationsDiagnosis",
+    "diagnosis|SHOWED|bloodTests"
+  ]
+}

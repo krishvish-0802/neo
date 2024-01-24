@@ -1,0 +1,42 @@
+{
+  "entities": [
+    {"label":"Case","id":"case27","summary":"A 59-year-old man with progressive dysphagia, history of COPD, myocardial infarction, and diagnosed with poorly differentiated squamous cell carcinoma of the esophagus."},
+    {"label":"Person","id":"person27","age":"59","location":"general surgery department","gender":"male"},
+    {"label":"Symptom","id":"progressiveDysphagia","description":"progressive dysphagia for solids"},
+    {"label":"Disease","id":"esophagealStenosis","name":"esophageal stenosis","description":"5-cm segment in the middle third of the esophagus"},
+    {"label":"Diagnosis","id":"squamousCellCarcinoma","name":"poorly differentiated squamous cell carcinoma","description":"G3"},
+    {"label":"Diagnosis","id":"splenomegaly","name":"mild splenomegaly","description":"with multiple nonspecific nodules"},
+    {"label":"Diagnosis","id":"liverMetastases","name":"multiple liver metastases"},
+    {"label":"Diagnosis","id":"cutaneousMetastases","name":"cutaneous metastases"},
+    {"label":"Procedure","id":"esophagectomy","name":"mid-distal esophagectomy with oesophagogastric anastomosis and gastric tube reconstruction"},
+    {"label":"Procedure","id":"spleenBiopsy","name":"FNAC of the spleen"},
+    {"label":"Procedure","id":"boneMarrowBiopsy","name":"bone-marrow biopsy"},
+    {"label":"Procedure","id":"splenectomy","name":"transabdominal total splenectomy with splenic and celiac artery lymph node dissection"},
+    {"label":"Treatment","id":"chemotherapy","name":"systemic chemotherapy","description":"5-fluorouracil (800 mg/day IV) and cisplatin (20 mg/day)"},
+    {"label":"BodySystem","id":"esophagus","name":"esophagus"},
+    {"label":"BodySystem","id":"chest","name":"chest"},
+    {"label":"BodySystem","id":"abdomen","name":"abdomen"},
+    {"label":"BodySystem","id":"spleen","name":"spleen"},
+    {"label":"BodySystem","id":"liver","name":"liver"},
+    {"label":"BodySystem","id":"skin","name":"skin"}
+  ],
+  "relationships": [
+    "case27|FOR|person27",
+    "person27|HAS_SYMPTOM{when:null,frequency:null,span:'one month'}|progressiveDysphagia",
+    "person27|HAS_DISEASE{when:null}|esophagealStenosis",
+    "person27|HAS_DIAGNOSIS|squamousCellCarcinoma",
+    "person27|HAS_PROCEDURE|esophagectomy",
+    "person27|HAS_DIAGNOSIS|splenomegaly",
+    "person27|HAS_DIAGNOSIS|liverMetastases",
+    "person27|HAS_DIAGNOSIS|cutaneousMetastases",
+    "person27|HAS_PROCEDURE|spleenBiopsy",
+    "person27|HAS_PROCEDURE|boneMarrowBiopsy",
+    "person27|HAS_PROCEDURE|splenectomy",
+    "person27|HAS_TREATMENT|chemotherapy",
+    "esophagealStenosis|SEEN_ON|chest",
+    "squamousCellCarcinoma|AFFECTS|esophagus",
+    "squamousCellCarcinoma|AFFECTS|chest",
+    "liverMetastases|AFFECTS|liver",
+    "cutaneousMetastases|AFFECTS|skin"
+  ]
+}

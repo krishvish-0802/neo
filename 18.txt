@@ -1,0 +1,25 @@
+{
+  "entities": [
+    {"label":"Case","id":"case18","summary":"A 41-year-old man with weight loss, nausea, vomiting, and abdominal pain referred for an abdominal CT scan, revealing an 18x22x22 cm heterogeneous retroperitoneal mass probably arising from the left adrenal gland."},
+    {"label":"Person","id":"person18","age":"41","location":null,"gender":"male"},
+    {"label":"Symptom","id":"weightLoss","description":"weight loss"},
+    {"label":"Symptom","id":"nausea","description":"nausea"},
+    {"label":"Symptom","id":"vomiting","description":"vomiting"},
+    {"label":"Symptom","id":"abdominalPain","description":"abdominal pain"},
+    {"label":"Disease","id":"adrenocorticalCarcinoma","name":"adrenocortical carcinoma","summary":"low-grade adrenocortical carcinoma"},
+    {"label":"BodySystem","id":"retroperitonealMass","name":"retroperitoneal mass"},
+    {"label":"Diagnosis","id":"abdominalCT","name":"abdominal CT scan","description":"dedicated CT of the abdomen performed with positive oral contrast and intravenous injection of iopromide, revealing a large retroperitoneal mass"},
+    {"label":"Biological","id":"macroscopicFat","name":"macroscopic fat","description":"multiple areas of macroscopic fat within the retroperitoneal mass"}
+  ],
+  "relationships": [
+    "case18|FOR|person18",
+    "person18|HAS_SYMPTOM{when:null,frequency:null,span:null}|weightLoss",
+    "person18|HAS_SYMPTOM{when:null,frequency:null,span:null}|nausea",
+    "person18|HAS_SYMPTOM{when:null,frequency:null,span:null}|vomiting",
+    "person18|HAS_SYMPTOM{when:null,frequency:null,span:null}|abdominalPain",
+    "person18|HAS_DISEASE{when:null}|adrenocorticalCarcinoma",
+    "adrenocorticalCarcinoma|AFFECTS|retroperitonealMass",
+    "person18|HAS_DIAGNOSIS|abdominalCT",
+    "abdominalCT|SHOWED|macroscopicFat"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "entities": [
+    {"label":"Case","id":"case32","summary":"A 5-year-old male with epistaxis, bleeding, purpuric rash, and congenital complete heart block."},
+    {"label":"Person","id":"person32","age":"5","location":"Children’s Emergency Department","gender":"male"},
+    {"label":"Symptom","id":"epistaxis","description":"epistaxis"},
+    {"label":"Symptom","id":"bleeding","description":"bleeding from dental extraction site"},
+    {"label":"Symptom","id":"purpuricRash","description":"widespread purpuric rash"},
+    {"label":"Symptom","id":"bradycardia","description":"heart rate ranged between 50 and 60 beats per minute"},
+    {"label":"Disease","id":"thrombocytopenia","name":"acute idiopathic thrombocytopenia"},
+    {"label":"Disease","id":"varicellaInfection","name":"varicella infection"},
+    {"label":"BodySystem","id":"chest","name":"chest"},
+    {"label":"Diagnosis","id":"completeHeartBlockVaricella","name":"complete heart block secondary to varicella infection","description":"presumed diagnosis"},
+    {"label":"Diagnosis","id":"congenitalHeartBlock","name":"congenital complete heart block","description":"diagnosis made after follow-up"},
+    {"label":"Biological","id":"plateletCount","name":"platelet count","description":"low platelet count (13×10^9/l) normalizing within 10 days"},
+    {"label":"Diagnosis","id":"congenitalHeartBlockIncidental","name":"incidental finding of congenital complete heart block","description":"congenital in aetiology with no association with varicella infection or acute thrombocytopenia"}
+  ],
+  "relationships": [
+    "case32|FOR|person32",
+    "person32|HAS_SYMPTOM{when:null,frequency:null,span:null}|epistaxis",
+    "person32|HAS_SYMPTOM{when:null,frequency:null,span:null}|bleeding",
+    "person32|HAS_SYMPTOM{when:null,frequency:null,span:null}|purpuricRash",
+    "person32|HAS_SYMPTOM{when:null,frequency:null,span:null}|bradycardia",
+    "person32|HAS_DISEASE{when:null}|thrombocytopenia",
+    "person32|HAS_DISEASE{when:'2 days prior'}|varicellaInfection",
+    "symptom32|SEEN_ON|chest",
+    "person32|HAS_DIAGNOSIS|completeHeartBlockVaricella",
+    "completeHeartBlockVaricella|SHOWED|plateletCount",
+    "person32|HAS_DIAGNOSIS|congenitalHeartBlock",
+    "congenitalHeartBlock|SHOWED|congenitalHeartBlockIncidental"
+  ]
+}

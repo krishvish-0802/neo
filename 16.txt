@@ -1,0 +1,34 @@
+{
+  "entities": [
+    {"label":"Case","id":"case16","summary":"A 21-year-old male with a 2-year history of progressive shortness of breath, dry cough, and chest abnormalities. Diagnosed with pulmonary alveolar microlithiasis (PAM)."},
+    {"label":"Person","id":"person16","age":"21","location":null,"gender":"male"},
+    {"label":"Symptom","id":"shortnessOfBreath","description":"progressive shortness of breath on exertion"},
+    {"label":"Symptom","id":"dryCough","description":"dry cough"},
+    {"label":"Disease","id":"pam","name":"pulmonary alveolar microlithiasis"},
+    {"label":"BodySystem","id":"lungs","name":"lungs"},
+    {"label":"Diagnosis","id":"ventilatoryDefect","name":"restrictive ventilatory defect","description":"mild restrictive ventilatory defect on PFT"},
+    {"label":"Diagnosis","id":"lungCapacity","name":"reduced total lung capacity","description":"79% (5.94 L)"},
+    {"label":"Diagnosis","id":"forcedVitalCapacity","name":"reduced forced vital capacity","description":"80% (4.18 L)"},
+    {"label":"Diagnosis","id":"forcedExpiratoryVolume","name":"reduced forced expiratory volume in one second","description":"83% (3.72 L)"},
+    {"label":"Diagnosis","id":"chestAbnormalities","name":"diffuse symmetric dense bilateral micronodular pattern on chest plain films","description":"diffuse symmetric dense bilateral micronodular pattern on chest plain films (Figure 1)"},
+    {"label":"Diagnosis","id":"groundGlassAttenuation","name":"diffuse ground glass attenuation","description":"diffuse ground glass attenuation on HRCT scan (Figure 2)"},
+    {"label":"Diagnosis","id":"septalThickening","name":"septal thickening","description":"septal thickening on HRCT scan"},
+    {"label":"Diagnosis","id":"calcifications","name":"calcifications along interlobar septa and subpleural regions","description":"calcifications along interlobar septa and subpleural regions on HRCT scan"},
+    {"label":"Diagnosis","id":"subpleuralCysts","name":"subpleural cysts","description":"subpleural cysts on HRCT scan"}
+  ],
+  "relationships": [
+    "case16|FOR|person16",
+    "person16|HAS_SYMPTOM{when:null,frequency:null,span:null}|shortnessOfBreath",
+    "person16|HAS_SYMPTOM{when:null,frequency:null,span:null}|dryCough",
+    "person16|HAS_DISEASE{when:'2-year history'}|pam",
+    "person16|HAS_DIAGNOSIS|ventilatoryDefect",
+    "person16|HAS_DIAGNOSIS|lungCapacity",
+    "person16|HAS_DIAGNOSIS|forcedVitalCapacity",
+    "person16|HAS_DIAGNOSIS|forcedExpiratoryVolume",
+    "person16|HAS_DIAGNOSIS|chestAbnormalities",
+    "person16|HAS_DIAGNOSIS|groundGlassAttenuation",
+    "person16|HAS_DIAGNOSIS|septalThickening",
+    "person16|HAS_DIAGNOSIS|calcifications",
+    "person16|HAS_DIAGNOSIS|subpleuralCysts"
+  ]
+}

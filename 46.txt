@@ -1,0 +1,38 @@
+{
+  "entities": [
+    {"label":"Case","id":"case46","summary":"An 84-year-old male with a history of coronary artery disease, RCA stenting, trans-subclavian TAVI, MitraClip intervention, ASD closure, aortic valve prosthesis migration, aortic and mitral valve replacement, coronary artery bypass surgery, and postoperative recovery."},
+    {"label":"Person","id":"person46","age":"84 years","location":null,"gender":"male"},
+    {"label":"Symptom","id":"Dyspnea","description":"progressive dyspnea"},
+    {"label":"Symptom","id":"Syncope","description":"recurring syncopes"},
+    {"label":"Symptom","id":"HeartFailure","description":"progressive heart failure"},
+    {"label":"Symptom","id":"RenalFailure","description":"acute renal failure"},
+    {"label":"Symptom","id":"PleuralEffusion","description":"bilateral pleural effusions, recurring"},
+    {"label":"Disease","id":"AorticStenosis","name":"Aortic Stenosis","summary":"Grade III severe symptomatic aortic stenosis"},
+    {"label":"Disease","id":"MitralRegurgitation","name":"Mitral Regurgitation","summary":"Severe mitral regurgitation"},
+    {"label":"Disease","id":"AorticRegurgitation","name":"Aortic Regurgitation","summary":"Moderate-to-severe aortic regurgitation"},
+    {"label":"Disease","id":"CoronaryArteryDisease","name":"Coronary Artery Disease","summary":"Progression of coronary artery disease"},
+    {"label":"BodySystem","id":"Heart","name":"Heart"},
+    {"label":"Diagnosis","id":"ValveProsthesisMigration","name":"Valve Prosthesis Migration","description":"Aortic valve prosthesis migration causing aortic paravalvular leakage and partial posterior mitral leaflet detachment"},
+    {"label":"Diagnosis","id":"AtrialSeptalDefect","name":"Atrial Septal Defect","description":"Procedurally dependent ASD closure with AMPLATZER™ PFO Occluder"},
+    {"label":"Diagnosis","id":"PostoperativeComplications","name":"Postoperative Complications","description":"Transient renal failure, recurring pleural effusions"},
+    {"label":"Biological","id":"ProsthesisFunction","name":"Prosthesis Function","description":"Adequate function of aortic and mitral valve prostheses"},
+    {"label":"Biological","id":"ValveImplants","name":"Valve Implants","description":"CoreValve prosthesis, Edwards Perimount aortic valve prosthesis, and Edwards Perimount mitral valve prosthesis"}
+  ],
+  "relationships": [
+    "case46|FOR|person46",
+    "person46|HAS_SYMPTOM{when:'February 2012',frequency:null,span:null}|Dyspnea",
+    "person46|HAS_SYMPTOM{when:'February 2012',frequency:null,span:null}|Syncope",
+    "person46|HAS_SYMPTOM{when:'Two weeks after secondary discharge',frequency:null,span:null}|HeartFailure",
+    "person46|HAS_SYMPTOM{when:'Two weeks after secondary discharge',frequency:null,span:null}|RenalFailure",
+    "person46|HAS_SYMPTOM{when:'After TAVI',frequency:null,span:null}|PleuralEffusion",
+    "person46|HAS_DISEASE{when:'February 2012'}|AorticStenosis",
+    "person46|HAS_DISEASE{when:'After TAVI'}|MitralRegurgitation",
+    "person46|HAS_DISEASE{when:'Postoperative phase'}|AorticRegurgitation",
+    "person46|HAS_DISEASE{when:'Postoperative coronary angiography'}|CoronaryArteryDisease",
+    "person46|HAS_DISEASE{when:'Postoperative phase'}|ValveProsthesisMigration",
+    "person46|HAS_DISEASE{when:'After MitraClip intervention and ASD closure'}|AtrialSeptalDefect",
+    "person46|HAS_DISEASE{when:'Postoperative phase'}|PostoperativeComplications",
+    "person46|HAS_DIAGNOSIS|ProsthesisFunction",
+    "person46|HAS_DIAGNOSIS|ValveImplants"
+  ]
+}

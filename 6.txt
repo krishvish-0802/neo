@@ -1,0 +1,34 @@
+{
+  "entities": [
+    {"label":"Case","id":"case6","summary":"A 74-year-old man with PBC (Scheuer stage 3) and ITP."},
+    {"label":"Person","id":"person6","age":"74","location":null,"gender":"male"},
+    {"label":"Disease","id":"nephroticSyndrome","name":"nephrotic syndrome"},
+    {"label":"Diagnosis","id":"pbc","name":"Primary Biliary Cholangitis (PBC)","description":"Scheuer stage 3, diagnosed in November 2000"},
+    {"label":"Biological","id":"ursodeoxycholicAcid","name":"ursodeoxycholic acid","description":"started as treatment for PBC"},
+    {"label":"Diagnosis","id":"esophagealVarices","name":"esophageal varices","description":"treated with endoscopic variceal ligation, endoscopic injection sclerotherapy, and argon plasma coagulation in January and June 2002"},
+    {"label":"Diagnosis","id":"recurrentEsophagealVarices","name":"recurrent esophageal varices","description":"admitted in September 2007 for treatment"},
+    {"label":"Diagnosis","id":"decompensatedLiverCirrhosisWithITP","name":"decompensated liver cirrhosis with ITP","description":"diagnosed based on laboratory and imaging findings"},
+    {"label":"Biological","id":"prednisolone","name":"prednisolone","description":"30 mg daily, started on day 11 for ITP"},
+    {"label":"Biological","id":"intravenousMethylprednisolone","name":"intravenous methylprednisolone","description":"1 g daily, pulse therapy added on day 22 to 24 for ITP"},
+    {"label":"Biological","id":"intravenousImmuneGammaGlobulin","name":"intravenous immune gamma globulin","description":"25 g daily, given on day 32 to 36 for ITP"},
+    {"label":"Symptom","id":"mildMelena","description":"mild melena identified on day 31"},
+    {"label":"Symptom","id":"ascites","description":"ascites"},
+    {"label":"Diagnosis","id":"carefulFollowUpOfEsophagealVarices","name":"careful follow-up of esophageal varices","description":"considering decompensated liver cirrhosis and platelet count"}
+  ],
+  "relationships": [
+    "case6|FOR|person6",
+    "person6|HAS_DISEASE{when:'1995'}|nephroticSyndrome",
+    "person6|HAS_DISEASE{when:'November 2000'}|pbc",
+    "pbc|AFFECTS|null",
+    "pbc|HAS_DIAGNOSIS|ursodeoxycholicAcid",
+    "person6|HAS_DIAGNOSIS|esophagealVarices",
+    "person6|HAS_DIAGNOSIS|recurrentEsophagealVarices",
+    "person6|HAS_DIAGNOSIS|decompensatedLiverCirrhosisWithITP",
+    "decompensatedLiverCirrhosisWithITP|SHOWED|prednisolone",
+    "decompensatedLiverCirrhosisWithITP|SHOWED|intravenousMethylprednisolone",
+    "decompensatedLiverCirrhosisWithITP|SHOWED|intravenousImmuneGammaGlobulin",
+    "decompensatedLiverCirrhosisWithITP|HAS_SYMPTOM{when:'day 31',frequency:null,span:null}|mildMelena",
+    "decompensatedLiverCirrhosisWithITP|HAS_SYMPTOM{when:null,frequency:null,span:null}|ascites",
+    "decompensatedLiverCirrhosisWithITP|HAS_DIAGNOSIS|carefulFollowUpOfEsophagealVarices"
+  ]
+}

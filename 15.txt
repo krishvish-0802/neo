@@ -1,0 +1,35 @@
+{
+  "entities": [
+    {"label":"Case","id":"case15","summary":"A 54-year-old woman with stage IV NSCLC, initially treated with carboplatin and paclitaxel, followed by erlotinib with subsequent resistance and CNS metastases. Various treatments were attempted, including high-dose weekly erlotinib."},
+    {"label":"Person","id":"person15","age":"54","location":null,"gender":"female"},
+    {"label":"Symptom","id":"headaches","description":"headaches"},
+    {"label":"Symptom","id":"nausea","description":"nausea"},
+    {"label":"Symptom","id":"vomiting","description":"vomiting"},
+    {"label":"Disease","id":"nsclc","name":"non-small cell lung cancer"},
+    {"label":"Disease","id":"lm","name":"leptomeningeal metastases"},
+    {"label":"Diagnosis","id":"erlotinibResponse","name":"response to erlotinib","description":"partial radiographic response of leptomeningeal metastases"},
+    {"label":"Diagnosis","id":"csfCytology","name":"CSF cytology","description":"confirmed leptomeningeal metastases"},
+    {"label":"Diagnosis","id":"mutations","name":"EGFR mutations","description":"L858R (sensitivity) and T790M (resistance) mutations"},
+    {"label":"Diagnosis","id":"csfConcentration","name":"CSF concentration analysis","description":"peak CSF concentration of 130 nM with 1500 mg weekly erlotinib"},
+    {"label":"Diagnosis","id":"hydrocephalus","name":"hydrocephalus"},
+    {"label":"Diagnosis","id":"intracranialPressure","name":"increased intracranial pressure"},
+    {"label":"Diagnosis","id":"radiographicResponse","name":"radiographic response","description":"partial response of leptomeningeal metastases on brain MRI"},
+    {"label":"Diagnosis","id":"survival","name":"survival","description":"14 months following the diagnosis of CNS disease"}
+  ],
+  "relationships": [
+    "case15|FOR|person15",
+    "person15|HAS_SYMPTOM{when:null,frequency:null,span:null}|headaches",
+    "person15|HAS_SYMPTOM{when:null,frequency:null,span:null}|nausea",
+    "person15|HAS_SYMPTOM{when:null,frequency:null,span:null}|vomiting",
+    "person15|HAS_DISEASE{when:'May 2008'}|nsclc",
+    "person15|HAS_DISEASE{when:'28 months later'}|lm",
+    "person15|HAS_DIAGNOSIS|erlotinibResponse",
+    "person15|HAS_DIAGNOSIS|csfCytology",
+    "person15|HAS_DIAGNOSIS|mutations",
+    "person15|HAS_DIAGNOSIS|csfConcentration",
+    "person15|HAS_DIAGNOSIS|hydrocephalus",
+    "person15|HAS_DIAGNOSIS|intracranialPressure",
+    "person15|HAS_DIAGNOSIS|radiographicResponse",
+    "person15|HAS_DIAGNOSIS|survival"
+  ]
+}

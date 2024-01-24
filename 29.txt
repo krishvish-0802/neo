@@ -1,0 +1,23 @@
+{
+  "entities": [
+    {"label":"Case","id":"case29","summary":"A 70–year–old female with palpitations, dyspnea, and anterior epistaxis, diagnosed with atrial fibrillation, chronic heart failure (NYHA class III), and left intraatrial thrombus."},
+    {"label":"Person","id":"person29","age":"70","location":null,"gender":"female"},
+    {"label":"Symptom","id":"palpitations","description":"palpitations"},
+    {"label":"Symptom","id":"dyspnea","description":"dyspnea"},
+    {"label":"Symptom","id":"epistaxis","description":"anterior epistaxis"},
+    {"label":"Disease","id":"atrialFibrillation","name":"atrial fibrillation","location":null},
+    {"label":"Disease","id":"chronicHeartFailure","name":"chronic heart failure","location":"NYHA class III"},
+    {"label":"Diagnosis","id":"leftIntraatrialThrombus","name":"left intraatrial thrombus","description":"mobile round mass in the left atrium, heterogeneous, inhomogeneous, of 18 mm in size, attached with a narrow stalk to the interatrial septum"},
+    {"label":"Biological","id":"fraxiparineAnticoagulation","name":"fraxiparine anticoagulation","description":"anticoagulation with fraxiparine of 0.6 ml/day for 3 weeks"}
+  ],
+  "relationships": [
+    "case29|FOR|person29",
+    "person29|HAS_SYMPTOM{when:null,frequency:null,span:null}|palpitations",
+    "person29|HAS_SYMPTOM{when:null,frequency:null,span:null}|dyspnea",
+    "person29|HAS_SYMPTOM{when:null,frequency:null,span:null}|epistaxis",
+    "person29|HAS_DISEASE{when:'3 years'}|atrialFibrillation",
+    "person29|HAS_DISEASE{when:'3 years'}|chronicHeartFailure",
+    "person29|HAS_DIAGNOSIS|leftIntraatrialThrombus",
+    "person29|HAS_DIAGNOSIS|fraxiparineAnticoagulation"
+  ]
+}

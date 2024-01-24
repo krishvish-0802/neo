@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {"label":"Case","id":"case21","summary":"A 3-year-old girl with VACTERL association, anorectal malformation, type C TE fistula, right renal agenesis, left hydronephrosis, vesicoureteral reflux, and hypermobile type Ehlers–Danlos syndrome. Mitochondrial dysfunction diagnosed at 13 months."},
+    {"label":"Person","id":"person21","age":"3","location":null,"gender":"female"},
+    {"label":"Symptom","id":"VACTERL","description":"features of VACTERL association: absent C1 vertebra, supernumerary lumbar vertebrae, hypoplastic sacrum/coccyx, fatty filum terminale with tethered spinal cord, and three fused ribs"},
+    {"label":"Symptom","id":"anorectalMalformation","description":"anorectal malformation including a cloaca consisting of a common urogenital sinus and a duplex vagina with midline septum"},
+    {"label":"Symptom","id":"TEFistula","description":"type C TE fistula"},
+    {"label":"Symptom","id":"renalAgenesis","description":"right renal agenesis with moderate left hydronephrosis and vesicoureteral reflux"},
+    {"label":"Symptom","id":"hypermobileEDS","description":"hypermobile type Ehlers–Danlos syndrome"},
+    {"label":"Symptom","id":"mitochondrialDysfunction","description":"progressive muscle weakness, autonomic dysregulation, hypoglycemic episodes, exocrine pancreatic dysfunction, decline of gastrointestinal function, visceral hyperalgesia, dysmotility, malabsorption, total parenteral nutrition dependency"},
+    {"label":"Symptom","id":"complexIVDeficiency","description":"complex IV deficiency in electron transport chain activity"},
+    {"label":"Disease","id":"mitochondrialDisease","name":"mitochondrial disease","summary":"evidence for mitochondrial dysfunction"},
+    {"label":"Diagnosis","id":"microarrayAnalysis","name":"microarray analysis","description":"detected maternally-inherited deletion at 4q35.1"},
+    {"label":"Diagnosis","id":"180KMicroarray","name":"180K custom oligonucleotide microarray","description":"refined the deleted region to a maximum size of 1.37 Mb"},
+    {"label":"Diagnosis","id":"mitochondrialGenomeSequencing","name":"whole mitochondrial genome sequencing","description":"did not reveal abnormalities"},
+    {"label":"Diagnosis","id":"POLGSequencing","name":"sequencing of DNA Polymerase Gamma 1 and 2 (POLG1 and POLG2)","description":"did not reveal abnormalities"}
+  ],
+  "relationships": [
+    "case21|FOR|person21",
+    "person21|HAS_SYMPTOM{when:null,frequency:null,span:null}|VACTERL",
+    "person21|HAS_SYMPTOM{when:null,frequency:null,span:null}|anorectalMalformation",
+    "person21|HAS_SYMPTOM{when:null,frequency:null,span:null}|TEFistula",
+    "person21|HAS_SYMPTOM{when:null,frequency:null,span:null}|renalAgenesis",
+    "person21|HAS_SYMPTOM{when:null,frequency:null,span:null}|hypermobileEDS",
+    "person21|HAS_SYMPTOM{when:13 months,frequency:null,span:null}|mitochondrialDysfunction",
+    "person21|HAS_DISEASE{when:13 months}|mitochondrialDisease",
+    "person21|HAS_DIAGNOSIS|microarrayAnalysis",
+    "person21|HAS_DIAGNOSIS|180KMicroarray",
+    "person21|HAS_DIAGNOSIS|mitochondrialGenomeSequencing",
+    "person21|HAS_DIAGNOSIS|POLGSequencing",
+    "mitochondrialDysfunction|SHOWED|complexIVDeficiency"
+  ]
+}

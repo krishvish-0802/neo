@@ -1,0 +1,22 @@
+{
+  "entities": [
+    {"label": "Case", "id": "case1", "summary": "A 28-year-old previously healthy man presented with a 6-week history of palpitations."},
+    {"label": "Person", "id": "person1", "age": "28", "gender": "male", "location": "unknown"},
+    {"label": "Symptom", "id": "palpitations", "description": "6-week history of palpitations"},
+    {"label": "Symptom", "id": "dyspnea", "description": "associated with dyspnea"},
+    {"label": "Disease", "id": "tricuspidRegurgitation", "name": "holosystolic tricuspid regurgitation"},
+    {"label": "BodySystem", "id": "chest", "name": "chest"},
+    {"label": "Diagnosis", "id": "wolffParkinsonWhite", "name": "Wolff–Parkinson–White pre-excitation pattern", "description": "revealed normal sinus rhythm and a Wolff– Parkinson– White pre-excitation pattern", "when": "unknown"},
+    {"label": "Biological", "id": "ebsteinsAnomaly", "name": "Ebstein's anomaly", "description": "presence of Ebstein's anomaly of the tricuspid valve, with apical displacement of the valve and formation of an “atrialized” right ventricle"}
+  ],
+  "relationships": [
+    "case1|FOR|person1",
+    "person1|HAS_SYMPTOM{when:\"6 weeks\",frequency:\"2–3 times per week\",span:\"up to 30 minutes\"}|palpitations",
+    "person1|HAS_SYMPTOM{when:\"6 weeks\",frequency:\"2–3 times per week\",span:\"up to 30 minutes\"}|dyspnea",
+    "person1|HAS_DISEASE{when:\"unknown\"}|tricuspidRegurgitation",
+    "symptom|SEEN_ON|chest",
+    "disease|AFFECTS|heart",
+    "person1|HAS_DIAGNOSIS|wolffParkinsonWhite",
+    "wolffParkinsonWhite|SHOWED|ebsteinsAnomaly"
+  ]
+}

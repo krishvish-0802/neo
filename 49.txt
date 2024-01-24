@@ -1,0 +1,33 @@
+{
+  "entities": [
+    {"label":"Case","id":"case49","summary":"A young boy with West Syndrome, refractory epilepsy, and symmetrical subcortical white matter lesions."},
+    {"label":"Person","id":"person49","age":"2 years 6 months","location":null,"gender":"male"},
+    {"label":"Symptom","id":"TonicUpwardEyeDeviation","description":"tonic upward eye deviation"},
+    {"label":"Symptom","id":"FlexionOfArmsAndNeck","description":"flexion of arms and neck"},
+    {"label":"Symptom","id":"FocalSeizures","description":"focal seizures involving right arm, leg, and face"},
+    {"label":"Symptom","id":"EpilepsiaPartialisContinua","description":"epilepsia partialis continua involving right face, arm, and leg"},
+    {"label":"Disease","id":"WestSyndrome","name":"West Syndrome","summary":"Diagnosed at 6 months with tonic upward eye deviation and hypsarrhythmia"},
+    {"label":"Disease","id":"RefractoryEpilepsy","name":"Refractory Epilepsy","summary":"Epilepsy resistant to various combinations of anticonvulsant therapy"},
+    {"label":"Disease","id":"SymmetricalWhiteMatterLesions","name":"Symmetrical White Matter Lesions","summary":"Symmetrical subcortical white matter lesions on cranial MRI"},
+    {"label":"Disease","id":"ThinningOfCorpusCallosum","name":"Thinning of Corpus Callosum","summary":"Thinning of the anterior and genu of the corpus callosum on cranial MRI"},
+    {"label":"Diagnosis","id":"SubcorticalWhiteMatterLesions","name":"Subcortical White Matter Lesions","description":"Symmetrical subcortical white matter lesions on cranial MRI"},
+    {"label":"Diagnosis","id":"ThinningCorpusCallosum","name":"Thinning Corpus Callosum","description":"Thinning of the anterior and genu of the corpus callosum on cranial MRI"},
+    {"label":"Biological","id":"BriskReflexes","name":"Brisk Reflexes","description":"Pathologically brisk reflexes"},
+    {"label":"Symptom","id":"MyoclonicJerks","description":"Brief myoclonic jerks"}
+  ],
+  "relationships": [
+    "case49|FOR|person49",
+    "person49|HAS_SYMPTOM{when:'6 months',frequency:null,span:null}|TonicUpwardEyeDeviation",
+    "person49|HAS_SYMPTOM{when:'6 months',frequency:null,span:null}|FlexionOfArmsAndNeck",
+    "person49|HAS_SYMPTOM{when:'1 year',frequency:null,span:null}|FocalSeizures",
+    "person49|HAS_SYMPTOM{when:'1 year',frequency:null,span:null}|EpilepsiaPartialisContinua",
+    "person49|HAS_DISEASE{when:'6 months'}|WestSyndrome",
+    "person49|HAS_DISEASE{when:'1 year'}|RefractoryEpilepsy",
+    "person49|HAS_DISEASE{when:'2 years 6 months'}|SymmetricalWhiteMatterLesions",
+    "person49|HAS_DISEASE{when:'2 years 6 months'}|ThinningOfCorpusCallosum",
+    "person49|HAS_DIAGNOSIS|SubcorticalWhiteMatterLesions",
+    "person49|HAS_DIAGNOSIS|ThinningCorpusCallosum",
+    "person49|HAS_DIAGNOSIS|BriskReflexes",
+    "person49|HAS_SYMPTOM{when:null,frequency:null,span:null}|MyoclonicJerks"
+  ]
+}

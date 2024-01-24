@@ -1,0 +1,27 @@
+{
+  "entities": [
+    {"label":"Case","id":"case30","summary":"A 53-year-old female with severe viral pneumonia, ARDS, and cardiac tamponade during VV-ECMO procedure."},
+    {"label":"Person","id":"person30","age":"53","location":null,"gender":"female"},
+    {"label":"Symptom","id":"severeViralPneumonia","description":"severe viral pneumonia"},
+    {"label":"Symptom","id":"ards","description":"ARDS"},
+    {"label":"Symptom","id":"cardiacTamponade","description":"cardiac tamponade"},
+    {"label":"Disease","id":"ARDS","name":"ARDS","location":null},
+    {"label":"Diagnosis","id":"vvEcmoProcedure","name":"VV-ECMO procedure","description":"bedside VV-ECMO with complications"},
+    {"label":"Biological","id":"intravenousHeparin","name":"intravenous heparin","description":"5000 units bolus dose of intravenous heparin"},
+    {"label":"Biological","id":"pericardialEffusion","name":"pericardial effusion","description":"rapidly enlarging pericardial effusion"},
+    {"label":"Biological","id":"venousBlood","name":"venous blood","description":"venous blood drained during surgical decompression"},
+    {"label":"BodySystem","id":"rightVentricalApex","name":"right ventricular apex"}
+  ],
+  "relationships": [
+    "case30|FOR|person30",
+    "person30|HAS_SYMPTOM{when:null,frequency:null,span:null}|severeViralPneumonia",
+    "person30|HAS_SYMPTOM{when:null,frequency:null,span:null}|ards",
+    "person30|HAS_SYMPTOM{when:null,frequency:null,span:null}|cardiacTamponade",
+    "person30|HAS_DISEASE{when:null}|ARDS",
+    "person30|HAS_DIAGNOSIS|vvEcmoProcedure",
+    "vvEcmoProcedure|SHOWED|intravenousHeparin",
+    "vvEcmoProcedure|SHOWED|pericardialEffusion",
+    "pericardialEffusion|SEEN_ON|rightVentricalApex",
+    "pericardialEffusion|SEEN_ON|venousBlood"
+  ]
+}

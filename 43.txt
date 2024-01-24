@@ -1,0 +1,41 @@
+{
+  "entities": [
+    {"label":"Case","id":"case43","summary":"A 54-year-old diabetic woman with blurred vision in the left eye for 5 days. Left optic nerve edema, disc margin hemorrhage, and macular edema consistent with central retinal artery occlusion. Later diagnosed with acute retinal necrosis and positive for VZV DNA."},
+    {"label":"Person","id":"person43","age":"54","location":null,"gender":"female"},
+    {"label":"Symptom","id":"BlurredVisionLeftEye","description":"blurred vision in the left eye for 5 days"},
+    {"label":"Symptom","id":"LeftEyePain","description":"new left eye pain"},
+    {"label":"Symptom","id":"VisionDeclineLeftEye","description":"vision declined to counting fingers in the left eye"},
+    {"label":"Symptom","id":"PainOnEyeMovement","description":"no pain on eye movement"},
+    {"label":"Symptom","id":"RelativeLeftAfferentPupillaryDefect","description":"relative left afferent pupillary defect"},
+    {"label":"Symptom","id":"JawClaudication","description":"jaw claudication"},
+    {"label":"Symptom","id":"ScalpPain","description":"scalp pain"},
+    {"label":"Symptom","id":"VisionWorseningLeftEye","description":"left eye pain and vision worsened"},
+    {"label":"Symptom","id":"NoLightPerceptionLeftEye","description":"no light perception in the left eye"},
+    {"label":"Diagnosis","id":"CentralRetinalArteryOcclusion","name":"Central Retinal Artery Occlusion","description":"left optic nerve swollen with cherry red spot and mild macular edema"},
+    {"label":"Diagnosis","id":"AcuteRetinalNecrosis","name":"Acute Retinal Necrosis","description":"extensive retinal necrosis and diffuse hemorrhages with multiple areas of focal venous beading"},
+    {"label":"Diagnosis","id":"VZVDNA","name":"VZV DNA","description":"positive for VZV DNA in vitreous fluid"},
+    {"label":"Treatment","id":"IntravitrealGanciclovir","name":"Intravitreal injection of ganciclovir","description":"one-time injection of 2000 mcg/0.5 ml in the left eye"},
+    {"label":"Treatment","id":"OralAcyclovir","name":"Oral acyclovir","description":"800 mg 5 times daily for 14 days"},
+    {"label":"Treatment","id":"OralPrednisone","name":"Oral prednisone","description":"60 mg daily for 7 days followed by 20 mg for 7 days"},
+    {"label":"Treatment","id":"IntravenousAcyclovir","name":"Intravenous acyclovir","description":"10 mg/kg every 8 h for 14 days"}
+  ],
+  "relationships": [
+    "case43|FOR|person43",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|BlurredVisionLeftEye",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|LeftEyePain",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|VisionDeclineLeftEye",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|PainOnEyeMovement",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|RelativeLeftAfferentPupillaryDefect",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|JawClaudication",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|ScalpPain",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|VisionWorseningLeftEye",
+    "person43|HAS_SYMPTOM{when:null,frequency:null,span:null}|NoLightPerceptionLeftEye",
+    "person43|HAS_DISEASE{when:null}|CentralRetinalArteryOcclusion",
+    "person43|HAS_DISEASE{when:null}|AcuteRetinalNecrosis",
+    "person43|HAS_DIAGNOSIS|VZVDNA",
+    "person43|HAS_TREATMENT|IntravitrealGanciclovir",
+    "person43|HAS_TREATMENT|OralAcyclovir",
+    "person43|HAS_TREATMENT|OralPrednisone",
+    "person43|HAS_TREATMENT|IntravenousAcyclovir"
+  ]
+}

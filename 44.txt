@@ -1,0 +1,22 @@
+{
+  "entities": [
+    {"label":"Case","id":"case44","summary":"A 23-year-old woman with a history of carnitine deficiency, presenting with exertional dyspnea and fatigue. Previously diagnosed with nonischemic cardiomyopathy at age 10, attributed to carnitine deficiency. Currently, intermittently compliant with carnitine supplements."},
+    {"label":"Person","id":"person44","age":"23","location":null,"gender":"female"},
+    {"label":"Disease","id":"CarnitineDeficiency","name":"Carnitine Deficiency","summary":"History of carnitine deficiency"},
+    {"label":"Disease","id":"NonischemicCardiomyopathy","name":"Nonischemic Cardiomyopathy","summary":"Diagnosed at age 10, attributed to carnitine deficiency"},
+    {"label":"Symptom","id":"ExertionalDyspnea","description":"exertional dyspnea"},
+    {"label":"Symptom","id":"Fatigue","description":"fatigue"},
+    {"label":"Diagnosis","id":"CurrentAdmission","name":"Current Admission","description":"Patient reports intermittent compliance with carnitine supplements, decreased carnitine levels, and undergoes TTE and CMR"},
+    {"label":"Biological","id":"CarnitineLevels","name":"Carnitine Levels","description":"Total carnitine level dropped to 18 μmol/L, and free carnitine level dropped to 17 μmol/L"}
+  ],
+  "relationships": [
+    "case44|FOR|person44",
+    "person44|HAS_SYMPTOM{when:null,frequency:null,span:null}|ExertionalDyspnea",
+    "person44|HAS_SYMPTOM{when:null,frequency:null,span:null}|Fatigue",
+    "person44|HAS_DISEASE{when:null}|CarnitineDeficiency",
+    "person44|HAS_DISEASE{when:null}|NonischemicCardiomyopathy",
+    "person44|HAS_DIAGNOSIS|CurrentAdmission",
+    "person44|HAS_DISEASE{when:null}|CarnitineDeficiency",
+    "person44|HAS_DIAGNOSIS|CarnitineLevels"
+  ]
+}

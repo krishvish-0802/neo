@@ -1,0 +1,38 @@
+{
+  "entities": [
+    {"label":"Case","id":"case45","summary":"A 14-month-old boy with dilated and hypertrophied left ventricle (LV), neutropenia, developmental delay, and a novel hemizygous frameshift mutation in the TAZ gene, leading to Barth syndrome. History of myocarditis, feeding difficulty, and multiple hospital admissions for infections."},
+    {"label":"Person","id":"person45","age":"14 months","location":null,"gender":"male"},
+    {"label":"Symptom","id":"Irritability","description":"persistent irritability"},
+    {"label":"Symptom","id":"FeedingDifficulty","description":"feeding difficulty"},
+    {"label":"Symptom","id":"DevelopmentalDelay","description":"developmental delay"},
+    {"label":"Symptom","id":"Fever","description":"abrupt high-grade spiking fever"},
+    {"label":"Symptom","id":"Diarrhea","description":"secretory diarrhea"},
+    {"label":"Symptom","id":"RespiratoryDifficulty","description":"respiratory difficulty"},
+    {"label":"Disease","id":"Myocarditis","name":"Myocarditis","summary":"Previously managed for 1 year"},
+    {"label":"Disease","id":"BarthSyndrome","name":"Barth Syndrome","summary":"Diagnosed during ICU stay, with a novel hemizygous frameshift mutation in the TAZ gene"},
+    {"label":"BodySystem","id":"Heart","name":"Heart"},
+    {"label":"Diagnosis","id":"LVAbnormalities","name":"LV Abnormalities","description":"Dilated and hypertrophied globular LV with hypertrophied papillary muscle and hyper-trabeculation"},
+    {"label":"Diagnosis","id":"Neutropenia","name":"Neutropenia","description":"Persistent neutropenia"},
+    {"label":"Diagnosis","id":"MetabolicAcidosis","name":"Metabolic Acidosis","description":"Abrupt onset during CT angiography"},
+    {"label":"Biological","id":"BnatriureticPeptide","name":"B-natriuretic Peptide","description":"Levels measured during different stages of the case"},
+    {"label":"Biological","id":"CTFindings","name":"CT Findings","description":"No abnormality in kidney and other organs and vessels"},
+    {"label":"Biological","id":"GeneticMutation","name":"Genetic Mutation","description":"Novel hemizygous frameshift mutation, c.227delC (p.Pro76LeufsX7), in the TAZ gene"}
+  ],
+  "relationships": [
+    "case45|FOR|person45",
+    "person45|HAS_SYMPTOM{when:'Sixteen days after birth',frequency:null,span:null}|Irritability",
+    "person45|HAS_SYMPTOM{when:null,frequency:null,span:null}|FeedingDifficulty",
+    "person45|HAS_SYMPTOM{when:null,frequency:null,span:null}|DevelopmentalDelay",
+    "person45|HAS_SYMPTOM{when:'After CT angiography',frequency:null,span:null}|Fever",
+    "person45|HAS_SYMPTOM{when:'After CT angiography',frequency:null,span:null}|Diarrhea",
+    "person45|HAS_SYMPTOM{when:'During ICU stay',frequency:null,span:null}|RespiratoryDifficulty",
+    "person45|HAS_DISEASE{when:'Sixteen days after birth'}|Myocarditis",
+    "person45|HAS_DISEASE{when:'During ICU stay'}|BarthSyndrome",
+    "person45|HAS_DIAGNOSIS|LVAbnormalities",
+    "person45|HAS_DIAGNOSIS|Neutropenia",
+    "person45|HAS_DIAGNOSIS|MetabolicAcidosis",
+    "person45|HAS_DIAGNOSIS|BnatriureticPeptide",
+    "person45|HAS_DIAGNOSIS|CTFindings",
+    "person45|HAS_DIAGNOSIS|GeneticMutation"
+  ]
+}

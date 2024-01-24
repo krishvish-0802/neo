@@ -1,0 +1,41 @@
+{
+  "entities": [
+    {"label":"Case","id":"case20","summary":"A 27-year-old male with a 2-year history of very frequent gelastic seizures. Diagnosed with a grade II astrocytoma."},
+    {"label":"Person","id":"person20","age":"27","location":null,"gender":"male"},
+    {"label":"Symptom","id":"gelasticSeizures","description":"very frequent gelastic seizures"},
+    {"label":"Symptom","id":"aura","description":"aura-like symptoms: warmth throughout the face and dizziness"},
+    {"label":"Symptom","id":"laughter","description":"brief period of laughter without motor involvement"},
+    {"label":"Symptom","id":"motorSeizures","description":"sudden laughter accompanied by simple motor partial seizures in both arms, more often involving the left arm"},
+    {"label":"Symptom","id":"dizziness","description":"dizziness"},
+    {"label":"Symptom","id":"consciousnessImpairment","description":"no impairment of consciousness state during seizures"},
+    {"label":"Disease","id":"astrocytoma","name":"grade II astrocytoma","summary":"minimal hypodense frontal right paramedian lesion"},
+    {"label":"BodySystem","id":"brain","name":"brain"},
+    {"label":"Diagnosis","id":"CTScan","name":"native CT scan","description":"diagnosed minimal hypodense frontal right paramedian lesion"},
+    {"label":"Diagnosis","id":"MRI","name":"cerebral MRI","description":"showed small right parenchymal homogeneous lesion involving gyrus cinguli"},
+    {"label":"Diagnosis","id":"EEG","name":"EEG recordings","description":"recorded 3 seizures with medio-frontal origin and rare interictal epileptiform elements"},
+    {"label":"Diagnosis","id":"microsurgicalApproach","name":"interhemispheric microsurgical approach","description":"used to remove infiltrative tumor above the corpus callosum and the right pericallosal artery at the level of gyrus cinguli"},
+    {"label":"Biological","id":"tumor","name":"yellow-gray, infiltrative tumor","description":"identified during surgery"},
+    {"label":"Diagnosis","id":"recovery","name":"recovery without deficits","description":"patient recovered well, no gelastic seizures or epileptic manifestations"},
+    {"label":"Diagnosis","id":"postopCT","name":"control postop CT","description":"revealed no tumor"}
+  ],
+  "relationships": [
+    "case20|FOR|person20",
+    "person20|HAS_SYMPTOM{when:null,frequency:null,span:null}|gelasticSeizures",
+    "person20|HAS_SYMPTOM{when:null,frequency:null,span:null}|aura",
+    "person20|HAS_SYMPTOM{when:null,frequency:null,span:null}|laughter",
+    "person20|HAS_SYMPTOM{when:null,frequency:null,span:null}|motorSeizures",
+    "person20|HAS_SYMPTOM{when:null,frequency:null,span:null}|dizziness",
+    "person20|HAS_SYMPTOM{when:null,frequency:null,span:null}|consciousnessImpairment",
+    "person20|HAS_DISEASE{when:null}|astrocytoma",
+    "astrocytoma|AFFECTS|brain",
+    "person20|HAS_DIAGNOSIS|CTScan",
+    "person20|HAS_DIAGNOSIS|MRI",
+    "person20|HAS_DIAGNOSIS|EEG",
+    "EEG|SHOWED|tumor",
+    "person20|HAS_DIAGNOSIS|microsurgicalApproach",
+    "microsurgicalApproach|SHOWED|tumor",
+    "tumor|AFFECTS|brain",
+    "person20|HAS_DIAGNOSIS|recovery",
+    "person20|HAS_DIAGNOSIS|postopCT"
+  ]
+}

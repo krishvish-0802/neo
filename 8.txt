@@ -1,0 +1,41 @@
+{
+  "entities": [
+    {"label":"Case","id":"case8","summary":"A 63-year-old woman with sudden-onset dyspnea, anterolateral ischemia, and NPPE secondary to an enlarged goiter."},
+    {"label":"Person","id":"person8","age":"63","location":null,"gender":"female"},
+    {"label":"Symptom","id":"suddenOnsetDyspnea","description":"sudden onset of dyspnea"},
+    {"label":"Symptom","id":"anterolateralIschemia","description":"anterolateral ischemia"},
+    {"label":"Symptom","id":"elevatedJugularVenousPressure","description":"elevated jugular venous pressure"},
+    {"label":"Symptom","id":"leftSidedThirdHeartSound","description":"left-sided third heart sound"},
+    {"label":"Symptom","id":"bibasilarCrackles","description":"bibasilar crackles in both lung fields"},
+    {"label":"Symptom","id":"sinusTachycardia","description":"sinus tachycardia of 140 beats/min"},
+    {"label":"Symptom","id":"recurrentPulmonaryEdema","description":"recurrent pulmonary edema"},
+    {"label":"Disease","id":"pulmonaryEdema","name":"pulmonary edema"},
+    {"label":"BodySystem","id":"heart","name":"heart"},
+    {"label":"Diagnosis","id":"mildDiastolicDysfunction","name":"mild diastolic dysfunction","description":"revealed by echocardiographic examination"},
+    {"label":"Diagnosis","id":"enlargedGoiter","name":"enlarged goiter","description":"4 cm × 9 cm multinodular goiter extending into the mediastinum"},
+    {"label":"Diagnosis","id":"trachealStenosis","name":"tracheal stenosis","description":"greater than 50% stenosis, revealed by intraoperative bronchoscopy"},
+    {"label":"Diagnosis","id":"nppe","name":"NPPE","description":"diagnosed secondary to an enlarged goiter"},
+    {"label":"Diagnosis","id":"thyroidectomy","name":"thyroidectomy","description":"surgical intervention for an enlarged goiter"},
+    {"label":"Diagnosis","id":"uncomplicatedPostoperativeCourse","name":"uncomplicated postoperative course","description":"three months following discharge"},
+    {"label":"Symptom","id":"subjectiveDyspnea","description":"without subjective dyspnea"}
+  ],
+  "relationships": [
+    "case8|FOR|person8",
+    "person8|HAS_SYMPTOM{when:null,frequency:null,span:null}|suddenOnsetDyspnea",
+    "person8|HAS_SYMPTOM{when:null,frequency:null,span:null}|anterolateralIschemia",
+    "person8|HAS_SYMPTOM{when:null,frequency:null,span:null}|elevatedJugularVenousPressure",
+    "person8|HAS_SYMPTOM{when:null,frequency:null,span:null}|leftSidedThirdHeartSound",
+    "person8|HAS_SYMPTOM{when:null,frequency:null,span:null}|bibasilarCrackles",
+    "person8|HAS_SYMPTOM{when:null,frequency:null,span:null}|sinusTachycardia",
+    "person8|HAS_SYMPTOM{when:1h,frequency:null,span:null}|recurrentPulmonaryEdema",
+    "person8|HAS_DISEASE{when:null}|pulmonaryEdema",
+    "person8|HAS_DISEASE{when:null}|heart",
+    "person8|HAS_DIAGNOSIS{when:null}|mildDiastolicDysfunction",
+    "person8|HAS_DIAGNOSIS{when:null}|enlargedGoiter",
+    "person8|HAS_DIAGNOSIS{when:null}|trachealStenosis",
+    "person8|HAS_DISEASE{when:null}|nppe",
+    "person8|HAS_DISEASE{when:null}|thyroidectomy",
+    "person8|HAS_DIAGNOSIS{when:'three months following discharge'}|uncomplicatedPostoperativeCourse",
+    "person8|HAS_SYMPTOM{when:'three months following discharge',frequency:null,span:null}|subjectiveDyspnea"
+  ]
+}

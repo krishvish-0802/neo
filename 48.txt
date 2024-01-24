@@ -1,0 +1,39 @@
+{
+  "entities": [
+    {"label":"Case","id":"case48","summary":"A 24-year-old Malay male with abnormal pre-employment chest radiograph and history of smoking."},
+    {"label":"Person","id":"person48","age":"24 years","location":null,"gender":"male"},
+    {"label":"Symptom","id":"ReducedEffortTolerance","description":"reduced effort tolerance"},
+    {"label":"Symptom","id":"Tachypnoeic","description":"tachypnoeic"},
+    {"label":"Symptom","id":"FingerClubbing","description":"finger clubbing"},
+    {"label":"Symptom","id":"PulmonaryHypertension","description":"pulmonary hypertension"},
+    {"label":"Symptom","id":"OxygenSaturationDrop","description":"oxygen saturation drop after climbing stairs"},
+    {"label":"Disease","id":"RestrictiveLungDisease","name":"Restrictive Lung Disease","summary":"Restrictive pattern of lung disease on spirometry"},
+    {"label":"Disease","id":"MicronodularOpacities","name":"Micronodular Opacities","summary":"Dense micronodular opacities in chest radiograph with 'sandstorm' appearance"},
+    {"label":"Disease","id":"Microcalcifications","name":"Microcalcifications","summary":"Widespread tiny microcalcifications in HRCT scan"},
+    {"label":"Disease","id":"Microliths","name":"Microliths","summary":"Preponderance of microliths in lower lobes on HRCT scan"},
+    {"label":"Disease","id":"InterlobularSeptalThickening","name":"Interlobular Septal Thickening","summary":"Interlobular septal thickening in HRCT scan"},
+    {"label":"Disease","id":"GroundGlassChanges","name":"Ground-Glass Changes","summary":"Ground-glass changes in HRCT scan"},
+    {"label":"Disease","id":"SubpleuralCysticChanges","name":"Subpleural Cystic Changes","summary":"Subpleural cystic changes in HRCT scan with 'black pleura sign'"},
+    {"label":"Diagnosis","id":"PAM","name":"PAM","description":"Diffuse parenchymal lung disease confirmed by lung biopsy"},
+    {"label":"Biological","id":"Calcospherites","name":"Calcospherites","description":"Numerous calcospherites within alveolar spaces in lung biopsy"},
+    {"label":"Diagnosis","id":"Pneumothorax","name":"Pneumothorax","description":"Moderate pneumothorax post mini-thoracotomy"}
+  ],
+  "relationships": [
+    "case48|FOR|person48",
+    "person48|HAS_SYMPTOM{when:null,frequency:null,span:null}|ReducedEffortTolerance",
+    "person48|HAS_SYMPTOM{when:null,frequency:null,span:null}|Tachypnoeic",
+    "person48|HAS_SYMPTOM{when:null,frequency:null,span:null}|FingerClubbing",
+    "person48|HAS_SYMPTOM{when:null,frequency:null,span:null}|PulmonaryHypertension",
+    "person48|HAS_SYMPTOM{when:null,frequency:null,span:null}|OxygenSaturationDrop",
+    "person48|HAS_DISEASE{when:null}|RestrictiveLungDisease",
+    "person48|HAS_DISEASE{when:null}|MicronodularOpacities",
+    "person48|HAS_DISEASE{when:null}|Microcalcifications",
+    "person48|HAS_DISEASE{when:null}|Microliths",
+    "person48|HAS_DISEASE{when:null}|InterlobularSeptalThickening",
+    "person48|HAS_DISEASE{when:null}|GroundGlassChanges",
+    "person48|HAS_DISEASE{when:null}|SubpleuralCysticChanges",
+    "person48|HAS_DIAGNOSIS|PAM",
+    "person48|HAS_DIAGNOSIS|Pneumothorax",
+    "PAM|SHOWED|Calcospherites"
+  ]
+}

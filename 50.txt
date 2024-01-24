@@ -1,0 +1,30 @@
+{
+  "entities": [
+    {"label":"Case","id":"case50","summary":"A 67-year-old Japanese female with Bowen’s disease and sebaceous carcinoma in her left buttock."},
+    {"label":"Person","id":"person50","age":"67","location":null,"gender":"female"},
+    {"label":"Symptom","id":"LeftButtockTumor","description":"left buttock tumor"},
+    {"label":"Disease","id":"BowensDisease","name":"Bowen’s Disease","summary":"Squamous cell carcinoma in situ"},
+    {"label":"Disease","id":"SebaceousCarcinoma","name":"Sebaceous Carcinoma","summary":"Superficial sebaceous carcinoma in the central area of the lesion"},
+    {"label":"BodySystem","id":"Skin","name":"Skin"},
+    {"label":"Diagnosis","id":"ProliferationAtypicalSquamousCells","name":"Proliferation of Atypical Squamous Cells","description":"Histopathological study revealed proliferation of atypical squamous cells in the entire layer of the acanthotic epidermis."},
+    {"label":"Diagnosis","id":"SuperficialSebaceousCarcinoma","name":"Superficial Sebaceous Carcinoma","description":"Superficial sebaceous carcinoma was present in the central area of the lesion."},
+    {"label":"Biological","id":"ExpressionEMA","name":"Expression of EMA","description":"EMA expressed in the sebaceous carcinoma component."},
+    {"label":"Biological","id":"ExpressionCytokeratin7","name":"Expression of Cytokeratin 7","description":"Cytokeratin 7 expressed in the sebaceous carcinoma component."},
+    {"label":"Biological","id":"ExpressionAdipophilin","name":"Expression of Adipophilin","description":"Adipophilin expressed in the sebaceous carcinoma component."},
+    {"label":"Biological","id":"ExpressionAndrogenReceptor","name":"Expression of Androgen Receptor","description":"Androgen receptor expressed in some tumor cells of the sebaceous carcinoma."},
+    {"label":"Biological","id":"Expressionp53","name":"Expression of p53","description":"Overexpression of p53 protein observed in both sebaceous carcinoma and Bowen’s disease."}
+  ],
+  "relationships": [
+    "case50|FOR|person50",
+    "person50|HAS_SYMPTOM{when:null,frequency:null,span:null}|LeftButtockTumor",
+    "person50|HAS_DISEASE{when:null}|BowensDisease",
+    "person50|HAS_DISEASE{when:null}|SebaceousCarcinoma",
+    "person50|HAS_DIAGNOSIS|ProliferationAtypicalSquamousCells",
+    "person50|HAS_DIAGNOSIS|SuperficialSebaceousCarcinoma",
+    "person50|HAS_DIAGNOSIS|ExpressionEMA",
+    "person50|HAS_DIAGNOSIS|ExpressionCytokeratin7",
+    "person50|HAS_DIAGNOSIS|ExpressionAdipophilin",
+    "person50|HAS_DIAGNOSIS|ExpressionAndrogenReceptor",
+    "person50|HAS_DIAGNOSIS|Expressionp53"
+  ]
+}

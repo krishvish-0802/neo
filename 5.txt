@@ -1,0 +1,31 @@
+{
+  "entities": [
+    {"label":"Case","id":"case5","summary":"A 60-year-old man from San Francisco with Streptococcus suis infection after consuming raw pork in the Philippines."},
+    {"label":"Person","id":"person5","age":"60","location":"San Francisco","gender":"male"},
+    {"label":"Symptom","id":"fever","description":"fever"},
+    {"label":"Symptom","id":"diaphoresis","description":"diaphoresis"},
+    {"label":"Symptom","id":"headache","description":"headache"},
+    {"label":"Symptom","id":"nausea","description":"nausea"},
+    {"label":"Symptom","id":"anorexia","description":"anorexia"},
+    {"label":"Symptom","id":"nuchalRigidity","description":"nuchal rigidity"},
+    {"label":"Symptom","id":"malaise","description":"general malaise"},
+    {"label":"Disease","id":"bacterialMeningitis","name":"bacterial meningitis"},
+    {"label":"BodySystem","id":"nervousSystem","name":"nervous system"},
+    {"label":"Diagnosis","id":"streptococcusInfection","name":"Streptococcus suis serotype 2 infection","description":"hospital day 7, identified by the API 20 Strep System"},
+    {"label":"Biological","id":"hearingLoss","name":"severe bilateral sensorineural high-frequency hearing loss","description":"hospital day 9, formal audiology evaluation (-70 dB)"}
+  ],
+  "relationships": [
+    "case5|FOR|person5",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'3 days'}|fever",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'3 days'}|diaphoresis",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'3 days'}|headache",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'3 days'}|nausea",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'3 days'}|anorexia",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'7 days'}|nuchalRigidity",
+    "person5|HAS_SYMPTOM{when:'June 2003',frequency:null,span:'7 days'}|malaise",
+    "person5|HAS_DISEASE{when:'hospital day 2'}|bacterialMeningitis",
+    "bacterialMeningitis|AFFECTS|nervousSystem",
+    "person5|HAS_DIAGNOSIS|streptococcusInfection",
+    "streptococcusInfection|SHOWED|hearingLoss"
+  ]
+}

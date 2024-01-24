@@ -1,0 +1,31 @@
+{
+  "entities": [
+    {"label":"Case","id":"case17","summary":"A 48-year-old man with intracranial bruits and diagnosed with a Cognard II dural arteriovenous fistula (DVAF) in the right hypoglossal canal."},
+    {"label":"Person","id":"person17","age":"48","location":"our hospital","gender":"male"},
+    {"label":"Symptom","id":"intracranialBruits","description":"intracranial bruits"},
+    {"label":"Symptom","id":"difficultySwallowing","description":"difficulty swallowing (dysphagia)"},
+    {"label":"Symptom","id":"slurredSpeech","description":"slurred speech (dysarthria)"},
+    {"label":"Symptom","id":"tongueDeviation","description":"tongue deviation toward the right"},
+    {"label":"Symptom","id":"rightHemiatrophy","description":"marked right-sided hemiatrophy of the tongue"},
+    {"label":"Disease","id":"dvaf","name":"Cognard II dural arteriovenous fistula","summary":"Cognard II DVAF in the right hypoglossal canal"},
+    {"label":"BodySystem","id":"hypoglossalCanal","name":"hypoglossal canal"},
+    {"label":"Diagnosis","id":"rightHypoglossalPalsy","name":"right hypoglossal nerve palsy","description":"significant right hypoglossal nerve palsy"},
+    {"label":"Diagnosis","id":"toxicityOfDMSO","name":"toxicity of DMSO","description":"toxicity of dimethyl sulfoxide (DMSO)"},
+    {"label":"Diagnosis","id":"dysphagia","name":"dysphagia","description":"difficulty swallowing persisting at two months follow-up"},
+    {"label":"Diagnosis","id":"dysarthria","name":"dysarthria","description":"slurred speech persisting at two months follow-up"}
+  ],
+  "relationships": [
+    "case17|FOR|person17",
+    "person17|HAS_SYMPTOM{when:null,frequency:null,span:null}|intracranialBruits",
+    "person17|HAS_SYMPTOM{when:'2 months follow-up',frequency:null,span:null}|difficultySwallowing",
+    "person17|HAS_SYMPTOM{when:'2 months follow-up',frequency:null,span:null}|slurredSpeech",
+    "person17|HAS_SYMPTOM{when:null,frequency:null,span:null}|tongueDeviation",
+    "person17|HAS_SYMPTOM{when:null,frequency:null,span:null}|rightHemiatrophy",
+    "person17|HAS_DISEASE{when:null}|dvaf",
+    "dvaf|AFFECTS|hypoglossalCanal",
+    "person17|HAS_DIAGNOSIS|rightHypoglossalPalsy",
+    "person17|HAS_DIAGNOSIS|toxicityOfDMSO",
+    "person17|HAS_DIAGNOSIS|dysphagia",
+    "person17|HAS_DIAGNOSIS|dysarthria"
+  ]
+}

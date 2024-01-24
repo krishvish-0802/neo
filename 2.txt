@@ -1,0 +1,21 @@
+{
+  "entities": [
+    {"label": "Case", "id": "case2", "summary": "The patient was a 34-yr-old man who presented with complaints of fever and a chronic cough."},
+    {"label": "Person", "id": "person2", "age": "34", "gender": "male", "location": "unknown"},
+    {"label": "Symptom", "id": "fever", "description": "complaints of fever"},
+    {"label": "Symptom", "id": "chronicCough", "description": "complaints of a chronic cough"},
+    {"label": "Disease", "id": "pulmonaryTuberculosis", "name": "pulmonary tuberculosis"},
+    {"label": "BodySystem", "id": "lungs", "name": "lungs"},
+    {"label": "Diagnosis", "id": "lungBiopsy", "name": "thoracoscopic lung biopsy", "description": "microscopic examination revealed a typical LCH", "when": "unknown"},
+    {"label": "Biological", "id": "lchTumor", "name": "Langerhans Cell Histiocytosis (LCH)", "description": "tumor cells had vesicular and grooved nuclei, formed small aggregations around the bronchioles, and were positive for S-100 protein, vimentin, CD68, and CD1a"}
+  ],
+  "relationships": [
+    "case2|FOR|person2",
+    "person2|HAS_SYMPTOM{when:\"unknown\",frequency:\"unknown\",span:\"unknown\"}|fever",
+    "person2|HAS_SYMPTOM{when:\"unknown\",frequency:\"unknown\",span:\"unknown\"}|chronicCough",
+    "person2|HAS_DISEASE{when:\"unknown\"}|pulmonaryTuberculosis",
+    "symptom|SEEN_ON|lungs",
+    "person2|HAS_DIAGNOSIS|lungBiopsy",
+    "lungBiopsy|SHOWED|lchTumor"
+  ]
+}
